@@ -5,7 +5,7 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2022-10-17T08:23:10Z</updated>
+  <updated>2022-10-17T08:23:00Z</updated>
   <entry>
     <title>Spring Data 2022.0.0-RC1, 2021.2.5, and 2021.1.8 available</title>
     <link rel="alternate" href="https://spring.io/blog/2022/10/17/spring-data-2022-0-0-rc1-2021-2-5-and-2021-1-8-available" />
@@ -14,11 +14,11 @@
       <name>Mark Paluch</name>
     </author>
     <id>tag:spring.io,2022-10-17:4948</id>
-    <updated>2022-10-17T08:23:10Z</updated>
+    <updated>2022-10-17T08:23:00Z</updated>
     <content type="html">&lt;p&gt;Dear Spring community,&lt;/p&gt;
 &lt;p&gt;On behalf of the Spring Data team and everyone who contributed, it is my pleasure to announce that Spring Data &lt;code&gt;2022.0.0&lt;/code&gt; has entered its release candidate phase by releasing RC1 today. It is available from the milestone repository. This release ships with several tickets fixed. Along with the release candidate, we shipped &lt;code&gt;2021.2.5&lt;/code&gt; and &lt;code&gt;2021.1.8&lt;/code&gt; service releases, to be picked up by corresponding Spring Boot releases.&lt;/p&gt;
 &lt;p&gt;The release candidate ships with a revised module structure, specifically Spring Data for Apache Geode is no longer part of the release train. Expect a blog post that outlines details soon.&lt;/p&gt;
-&lt;p&gt;Please give Spring Data &lt;code&gt;2021.1.0-RC1&lt;/code&gt; a try (for example, as part of the upcoming Spring Boot &lt;code&gt;3.0.0-RC1&lt;/code&gt; release), which will be available start.spring.io soon, and let us know about any regressions or other issues.&lt;/p&gt;&lt;h2&gt;&lt;a href="#2022-0-0-rc1" class="anchor" name="2022-0-0-rc1"&gt;&lt;/a&gt;2022.0.0-RC1&lt;/h2&gt;
+&lt;p&gt;Please give Spring Data &lt;code&gt;2022.0.0-RC1&lt;/code&gt; a try (for example, as part of the upcoming Spring Boot &lt;code&gt;3.0.0-RC1&lt;/code&gt; release), which will be available start.spring.io soon, and let us know about any regressions or other issues.&lt;/p&gt;&lt;h2&gt;&lt;a href="#2022-0-0-rc1" class="anchor" name="2022-0-0-rc1"&gt;&lt;/a&gt;2022.0.0-RC1&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Spring Data Commons &lt;code&gt;3.0 RC1&lt;/code&gt; - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-commons/3.0.0-RC1"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/commons/docs/3.0.0-RC1/api/"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/commons/docs/3.0.0-RC1/reference/html/"&gt;Documentation&lt;/a&gt; - &lt;a href="https://github.com/spring-projects/spring-data-commons/releases/tag/3.0.0-RC1"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Spring Data JPA &lt;code&gt;3.0 RC1&lt;/code&gt; - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-jpa/3.0.0-RC1"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/jpa/docs/3.0.0-RC1/api/"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/jpa/docs/3.0.0-RC1/reference/html/"&gt;Documentation&lt;/a&gt; - &lt;a href="https://github.com/spring-projects/spring-data-jpa/releases/tag/3.0.0-RC1"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
@@ -340,7 +340,7 @@ example of such a key value (for example, &lt;code&gt;/user/user1234&lt;/code&gt
 &lt;div class="ulist"&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Since we have Micrometer Tracing on the classpath, the logs are automatically correlated (that is, they contain a unique trace identifier). Now we need to ship the logs. For this demo, we ship them to &lt;a href="https://grafana.com/oss/loki/"&gt;Grafana Loki&lt;/a&gt;. We can achieve that by adding the &lt;code&gt;com.github.loki4j:loki-logback-appender:latest.release&lt;/code&gt; dependency.&lt;/p&gt;
+&lt;p&gt;Since we have Micrometer Tracing on the classpath, the logs are automatically correlated (that is, they contain a unique trace identifier). Now we need to ship the logs. For this demo, we ship them to &lt;a href="https://grafana.com/oss/loki/"&gt;Grafana Loki&lt;/a&gt;. We can achieve that by adding the &lt;code&gt;com.github.loki4j:loki-logback-appender&lt;/code&gt; dependency (check &lt;a href="https://search.maven.org/artifact/com.github.loki4j/loki-logback-appender"&gt;this link&lt;/a&gt; for the latest release version)&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -595,7 +595,7 @@ class MyConfiguration {
 &lt;div class="ulist"&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;As previously, we add the &lt;code&gt;com.github.loki4j:loki-logback-appender:latest.release&lt;/code&gt; dependency to ship logs to Loki.&lt;/p&gt;
+&lt;p&gt;As previously, we add the &lt;code&gt;com.github.loki4j:loki-logback-appender&lt;/code&gt; dependency (check &lt;a href="https://search.maven.org/artifact/com.github.loki4j/loki-logback-appender"&gt;this link&lt;/a&gt; for the latest release version) to ship logs to Loki.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;

@@ -72,3 +72,4 @@
 2022-10-17 18:34:38,585 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\uell0\Documents\workspace-sts-3.9.14.RELEASE\spring_di1_xmlconfig\src\main\resources
 2022-10-17 18:34:38,589 [Worker-7: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 2022-10-17 18:34:38,591 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\uell0\Documents\workspace-sts-3.9.14.RELEASE\spring_di1_xmlconfig\src\test\resources
+2022-10-18 08:37:38,590 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
