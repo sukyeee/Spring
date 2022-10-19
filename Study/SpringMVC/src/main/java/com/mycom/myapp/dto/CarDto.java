@@ -4,6 +4,7 @@ public class CarDto {
 	private String name;
 	private int price;
 	private String ownerName;
+	
 	public String getName() {
 		return name;
 	}
@@ -16,8 +17,6 @@ public class CarDto {
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	
-	
 	public String getOwnerName() {
 		return ownerName;
 	}
@@ -28,6 +27,4 @@ public class CarDto {
 	public String toString() {
 		return "CarDto [name=" + name + ", price=" + price + ", ownerName=" + ownerName + "]";
 	}
-	
-	
 }

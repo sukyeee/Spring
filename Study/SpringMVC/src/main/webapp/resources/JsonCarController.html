@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>title</title>
+</head>
+<body>
+
+    <h1> send JSON test</h1>
+    <hr>
+    <button id="sendCar">Car보내기</button>
+    <button id="sendCarList">Car List 보내기</button>
+    
+	<script>
+	let car = {
+		name: 'nunuCar',
+		price: 4000,
+		ownerName: 'nunu'
+	};
+	
+	window.onload = function(){
+		document.querySelector('#sendCar').onclick = async function(){
+			let fetchOptions = {
+				method: 'POST',
+	            headers: {
+	            	'Content-Type': 'application/json'
+	            },
+	            body: JSON.stringify(car)
+			}
+			
+			try {
+                let response = await fetch('/myapp/car', fetchOptions);
+                let data = await response.json();
+                console.log(data);	// response  없으므로 오류
+            } catch(error){
+                console.error(error);
+            }
+			
+            /* 이거 왜 안되냐  fetch 안에 +되어잇어서 안댐
+			try{
+				let response = await fetch('/myapp/car'+fetchOptions)
+				let data = await response.json()
+				console.log(data)
+			} catch(err){
+				console.log(err)
+			}
+			
+			*/
+		}
+	}
+	
+	</script>
+</body>
+</html>

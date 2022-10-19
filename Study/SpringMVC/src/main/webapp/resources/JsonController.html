@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>title</title>
+</head>
+<body>
+
+    <h1> send JSON test</h1>
+    <hr>
+    <button id="sendEmp">Emp 보내기</button>
+    <button id="sendEmpList">Emp List 보내기</button>
+    
+    <h1> Receive JSON test</h1>
+    <hr>
+    <button id="receiveEmp">Emp 받기</button>
+    <button id="receiveEmpList">Emp List 받기</button>
+    
+    <h1> Receive LocalDateTime test</h1>
+    <hr>
+    <button id="receiveLocalDateTime">LocalDateTime받기</button>
+    
+    <script>
+        // javascript object
+    var emp = {
+        employeeId: 1500,
+        firstName: 'gildong',
+        lastName: 'hong',
+        email: 'hong@gildong.com',
+        hireDate: '2022-10-19'
+    }
+
+    var empList = [
+        {
+            employeeId: 1500,
+            firstName: 'gildong',
+            lastName: 'hong',
+            email: 'hong@gildong.com',
+            hireDate: '2022-10-19'
+        },
+        {
+            employeeId: 1600,
+            firstName: 'gildong2',
+            lastName: 'hong2',
+            email: 'hong2@gildong.com',
+            hireDate: '2022-10-20'
+        },
+        {
+            employeeId: 1700,
+            firstName: 'gildong3',
+            lastName: 'hong3',
+            email: 'hong3@gildong.com',
+            hireDate: '2022-10-21'
+        }
+
+    ]
+
+    window.onload = function() {
+        document.querySelector("#sendEmp").onclick = async function(){
+            // fetch 를 이용해서 emp 객체를 json으로 BackEnd에 post 전송
+            let fetchOptions = {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(emp)
+            }
+
+            try {
+                let response = await fetch('/myapp/emp', fetchOptions);
+                let data = await response.json();
+                console.log(data); // response  없으므로 오류
+            } catch(error){
+                console.error(error);
+            }
+        }
+
+        document.querySelector("#sendEmpList").onclick = async function(){
+            // fetch 를 이용해서 emp 객체를 json으로 BackEnd에 post 전송
+            let fetchOptions = {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(empList)
+            }
+
+            try {
+                let response = await fetch('/myapp/empList', fetchOptions);
+                let data = await response.json();
+                console.log(data);	// response  없으므로 오류
+            } catch(error){
+                console.error(error);
+            }
+        }
+        
+        document.querySelector("#receiveEmp").onclick = async function(){
+            // fetch 를 이용해서 emp 객체를 json으로 BackEnd로부터 받는다
+            // ㅓjson으로 response를 받는다.
+            try {
+                let response = await fetch('/myapp/empDetail/12345');
+                let data = await response.json();
+                console.log(data);
+            } catch(error){
+                console.error(error);
+            }
+        }
+        
+        document.querySelector("#receiveEmpList").onclick = async function(){
+            try {
+                let response = await fetch('/myapp/empList');
+                let data = await response.json();
+                console.log(data);	
+            } catch(error){
+                console.error(error);
+            }
+        }
+        
+        document.querySelector("#receiveLocalDateTime").onclick = async function(){
+            // fetch 를 이용해서 emp 객체를 json으로 BackEnd로부터 받는다
+            // ㅓjson으로 response를 받는다.
+            try {
+                let response = await fetch('/myapp/localDateTime');
+                let data = await response.json();
+                console.log(data);
+            } catch(error){
+                console.error(error);
+            }
+        }
+        
+    }
+
+    </script>
+</body>
+</html>
