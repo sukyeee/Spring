@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>title</title>
+</head>
+<body>
+	<button id="btnUserDetail">User 상세</button>
+	<button id="btnUserList">User 목록</button>
+	<br>
+	<button id="btnUserInsert">User 등록</button>
+	<button id="btnUserDelete">User 삭제</button>
+	<button id="btnUserUpdate">User 수정</button>
+	
+	<script>
+	window.onload = function() {
+		document.querySelector("#btnUserDetail").onclick = async function() {
+			
+			try {
+				let response = await fetch('/hw/userDetail/sk');
+				let data = await response.json();
+				console.log(data);
+			} catch(error) {
+				console.error(error)
+			}
+			
+		}
+		
+		
+	document.querySelector("#btnUserList").onclick = async function() {
+			
+			try {
+				let response = await fetch('/hw/userList');
+				let data = await response.json();
+				console.log(data);
+			} catch(error) {
+				console.error(error)
+			}
+			
+		}
+	
+	// javascript 객체
+	var userInsertData = {
+		id: 'sukyung',
+		password: '1234',
+		name : '수경',
+		email: 'sk@com',
+		age: 25
+	}
+	
+	document.querySelector("#btnUserInsert").onclick = async function() {
+		
+		let urlParams = new URLSearchParams( userInsertData );
+		let fetchOptions = {
+			method: 'POST', 
+			body: urlParams
+		}
+		
+		try {
+			let response = await fetch('/hw/userInsert', fetchOptions);
+			let data = await response.json();
+			console.log(data);
+		} catch(error) {
+			console.error(error)
+		}
+		
+	}
+	
+
+	document.querySelector("#btnUserDelete").onclick = async function() {
+		
+		let urlParams = new URLSearchParams( {userId: "sukyung"} );
+		let fetchOptions = {
+			method: 'POST', 
+			body: urlParams
+		}
+		
+		try {
+			let response = await fetch('/hw/userDelete', fetchOptions);
+			let data = await response.json();
+			console.log(data);
+		} catch(error) {
+			console.error(error)
+		}
+		
+	}
+		
+	var userUpdateData = {
+			id: 'sukyung',
+			password: '007',
+			name : '수경2',
+			email: 'sk@com2',
+			age: 22
+		}
+	
+	document.querySelector("#btnUserUpdate").onclick = async function() {
+		
+		let urlParams = new URLSearchParams( userUpdateData );
+		let fetchOptions = {
+			method: 'POST', 
+			body: urlParams
+		}
+		
+		try {
+			let response = await fetch('/hw/userUpdate', fetchOptions);
+			let data = await response.json();
+			console.log(data);
+		} catch(error) {
+			console.error(error)
+		}
+		
+	}
+	
+	
+	
+	}
+	</script>
+</body>
+</html>
