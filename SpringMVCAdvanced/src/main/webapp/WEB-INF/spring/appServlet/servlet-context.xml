@@ -21,18 +21,18 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.mycom.myadv" />
+	<context:component-scan base-package="com.mycom.myadv.controller, com.mycom.myadv.common" />
 	
 <!-- 	component 중에서 interceptor implements 하는 것 찾음 -->
-	<interceptors>
+<!-- 	<interceptors> -->
 		<!-- 여러 개의 interceptor 를 지정 -->
 		<!-- 어느 interceptor 에 어떤 url mapping 을 적용-->
-		<interceptor>
-			<mapping path="/**"></mapping> <!-- 모든  url 에 적용 -->
-			<exclude-mapping path="/login/**"/>
-			<exclude-mapping path="/resources/**"/>		
-			<beans:ref bean="testInterceptor"/>
-		</interceptor>
-	</interceptors>
+<!-- 		<interceptor> -->
+<!-- 			<mapping path="/**"></mapping> 모든  url 에 적용 -->
+<!-- 			<exclude-mapping path="/login/**"/> -->
+<!-- 			<exclude-mapping path="/resources/**"/>		 -->
+<!-- 			<beans:ref bean="testInterceptor"/> -->
+<!-- 		</interceptor> -->
+<!-- 	</interceptors> -->
 	
 </beans:beans>

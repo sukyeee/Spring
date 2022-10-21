@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1> Test</h1>
+	<button id="btnException">Controller 예외 발생 async 요청</button>
+	
+	<button id="btnStudentInsert"> studentInsert </button>
+	
+	<script>
+		window.onload = function(){
+			
+			document.querySelector("#btnException").onclick = async function() {
+				
+				try {
+					let response = await fetch("/myadv/exception");
+					let data = await response.json();
+					if( data.result == "ajax_exception"){
+						alert("서버에 문제가 있습니다.");
+					}
+					console.log( data );
+				} catch( error ){
+					console.error( error );
+				}
+				
+			}
+			
+			
+
+			
+		document.querySelector("#btnStudentInsert").onclick = async function() {
+				
+				
+				let fetchOptions = {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify( {
+						studentNm: '홍길동',
+						email: 'hong@gildong.com',
+						phone: '010-1111-1111'
+					})
+				}
+				
+				try {
+					let response = await fetch('/myadv/students', fetchOptions);
+					let data = await response.json();
+					console.log(data);
+				} catch(error) {
+					console.error(error)
+				}
+				
+			}
+			
+			
+		}
+		
+		
+		
+	</script>
+	
+</body>
+</html>
