@@ -1,0 +1,4 @@
+[INFO] 2022-10-21 14:03:45,274 org.springframework.web.context.ContextLoader initWebApplicationContext - Root WebApplicationContext: initialization started
+[INFO] 2022-10-21 14:03:45,573 org.springframework.web.context.ContextLoader initWebApplicationContext - Root WebApplicationContext initialized in 295 ms
+[INFO] 2022-10-21 14:03:45,650 org.springframework.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'appServlet'
+[INFO] 2022-10-21 14:03:46,533 org.springframework.web.servlet.DispatcherServlet initServletBean - Completed initialization in 883 ms

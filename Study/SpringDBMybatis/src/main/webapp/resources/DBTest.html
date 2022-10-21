@@ -14,6 +14,9 @@
 	<button id="btnEmpDelete">Emp 삭제</button>
 	<button id="btnEmpUpdate">Emp 수정</button>
 	
+	<hr>
+	<button id="btnEmpListParameterMap">Emp 목록 Parameter Map</button>
+	<button id="btnEmpListLike">Emp 목록 Like</button>
 	
 	<script>
 	window.onload = function() {
@@ -115,6 +118,45 @@
 	}
 	
 	
+	document.querySelector("#btnEmpListParameterMap").onclick = async function() {
+		
+		let firstName = '길동';
+		let lastName = '홍';
+		// let url = '/mybatis/empListParameterMap'
+		//let url = '/mybatis/empListParameterMap2'
+		let url = '/mybatis/empListParameterMap3' // dto
+		
+		let urlParams = `?firstName=${firstName}&lastName=${lastName}`
+				
+				
+		try {
+			let response = await fetch(url + urlParams);
+			let data = await response.json();
+			console.log(data);
+		} catch(error) {
+			console.error(error)
+		}
+		
+	}
+	
+
+	document.querySelector("#btnEmpListLike").onclick = async function() {
+		
+		let firstName = '길동';
+		let url = '/mybatis/empListLike' 
+		
+		let urlParams = `?firstName=${firstName}`
+				
+				
+		try {
+			let response = await fetch(url + urlParams);
+			let data = await response.json();
+			console.log(data);
+		} catch(error) {
+			console.error(error)
+		}
+		
+	}
 	
 	}
 	</script>
