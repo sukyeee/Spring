@@ -1,49 +1,93 @@
 package com.mycom.rest.dto;
 
+import java.util.Date;
+
 public class BoardDto {
 
-	private int studentId;
-	private String studentNm;
-	private String email;
-	private String phone;
-	public int getStudentId() {
-		return studentId;
+		
+  private int eventKey;
+  private String name;
+  private Date startDateTime;
+  private Date endDateTime;
+  private String url;
+  private String statusCode;
+  private String registerId;
+  private Date registerDateTime;
+  private boolean sameUser; // 글쓴이와 보는 이가 같은 사용자인지 여부
+  
+	public int getEventKey() {
+		return eventKey;
 	}
-	public void setStudentId(int studentId) {
-		this.studentId = studentId;
+	public void setEventKey(int eventKey) {
+		this.eventKey = eventKey;
 	}
-	public String getStudentNm() {
-		return studentNm;
-	}
-	public void setStudentNm(String studentNm) {
-		this.studentNm = studentNm;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getPhone() {
-		return phone;
-	}
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-	@Override
-	public String toString() {
-		return "StudentDto [studentId=" + studentId + ", studentNm=" + studentNm + ", email=" + email + ", phone="
-				+ phone + "]";
-	}
-	public BoardDto() {};
-	public BoardDto(int studentId, String studentNm, String email, String phone) {
+	public BoardDto(int eventKey, String name, Date startDateTime, Date endDateTime, String url, String statusCode,
+			String registerId, Date registerDateTime, boolean sameUser) {
 		super();
-		this.studentId = studentId;
-		this.studentNm = studentNm;
-		this.email = email;
-		this.phone = phone;
+		this.eventKey = eventKey;
+		this.name = name;
+		this.startDateTime = startDateTime;
+		this.endDateTime = endDateTime;
+		this.url = url;
+		this.statusCode = statusCode;
+		this.registerId = registerId;
+		this.registerDateTime = registerDateTime;
+		this.sameUser = sameUser;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Date getStartDateTime() {
+		return startDateTime;
+	}
+	public void setStartDateTime(Date startDateTime) {
+		this.startDateTime = startDateTime;
+	}
+	public Date getEndDateTime() {
+		return endDateTime;
+	}
+	public void setEndDateTime(Date endDateTime) {
+		this.endDateTime = endDateTime;
+	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
+	}
+	public String getStatusCode() {
+		return statusCode;
+	}
+	public void setStatusCode(String statusCode) {
+		this.statusCode = statusCode;
+	}
+	public String getRegisterId() {
+		return registerId;
+	}
+	public void setRegisterId(String registerId) {
+		this.registerId = registerId;
+	}
+	public Date getRegisterDateTime() {
+		return registerDateTime;
+	}
+	public void setRegisterDateTime(Date registerDateTime) {
+		this.registerDateTime = registerDateTime;
+	}
+	public boolean isSameUser() {
+		return sameUser;
+	}
+	public void setSameUser(boolean sameUser) {
+		this.sameUser = sameUser;
 	}
 	
-	
+		
+		  
+  
+	  
+	  
+	  
 	
 }
