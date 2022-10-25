@@ -3,6 +3,8 @@
 
 ### Eclipse ###
 Servers/
+META-INF/*
+target/*
 .metadata
 bin/
 tmp/
