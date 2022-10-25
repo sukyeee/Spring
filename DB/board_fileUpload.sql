@@ -28,3 +28,4 @@ select * from board;
 	              from BOARD b, USERS u 
 	        	 where b.user_seq = u.user_seq 
 	        	   and b.board_id = 1;
+                   
