@@ -94,7 +94,7 @@ public class BoardController {
 	private ResponseEntity<BoardResultDto> boardInsert( BoardDto boardDto, HttpSession session ){
 		
 		System.out.println(boardDto);
-	
+		// 현재 사용자의 userSeq를 session에서 획득, 전달
 		UserDto userDto = (UserDto) session.getAttribute("userDto"); // 현재 로그인되어서 상세 요청을 한 사용자 정보
 		boardDto.setUserSeq(userDto.getUserSeq()); // 사용자 seq
 		

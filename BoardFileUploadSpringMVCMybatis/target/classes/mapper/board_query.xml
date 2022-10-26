@@ -60,8 +60,8 @@
 		
 		<insert id="boardInsert" parameterType="com.mycom.myboard.dto.BoardDto" >
 			insert into board 
-			( board_id , user_seq, title, content, reg_dt, read_count)
-			 VALUES (#{boardId}, #{userSeq}, #{title}, #{content}, now(), #{readCount});
+			(  user_seq, title, content, reg_dt, read_count)
+			 VALUES ( #{userSeq}, #{title}, #{content}, now(), 0);
 	
 		</insert>
 		
