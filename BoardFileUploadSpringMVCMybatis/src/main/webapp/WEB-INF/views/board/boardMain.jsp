@@ -153,7 +153,7 @@
                 	</tbody>
             	</table>
             	
-            	<button id="btnBoardUpdateForm" type="button" class="btn btn-sm btn-primary">수정</button>
+            	<button id="btnBoardUpdateForm" type="button" class="btn btn-sm btn-primary" data-bs-dismiss="modal">수정</button>
             	<button id="btnBoardDeleteConfirm" type="button" class="btn btn-sm btn-warning">삭제</button>
             </div>
 
@@ -238,6 +238,12 @@
     			document.querySelector("#titleInsert").value = "";
     			CKEditorInsert.setData("");
     			
+    			// 파일업로드 관련 ui 초기화
+    			document.querySelector("#chkFileUploadInsert").checked = false;
+   				document.querySelector("#inputFileUploadInsert").value = "";
+   				document.querySelector("#imgFileUploadInsertThumbnail").innerHTML = "";
+   				document.querySelector("#imgFileUploadInsertWrapper").style.display = "none";
+   		
     			let modal = new bootstrap.Modal(
     					document.querySelector("#boardInsertModal")
     			);
@@ -260,18 +266,21 @@
 				// detail modal 닫고 update modal 을 띄운다.
 				let boardId = document.querySelector("#boardDetailModal").getAttribute("data-boardId");
 				document.querySelector("#boardUpdateModal").setAttribute("data-boardId", boardId);
-				
 				document.querySelector("#titleUpdate").value = document.querySelector("#titleDetail").innerHTML;
-				
 				CKEditorUpdate.setData(document.querySelector("#contentDetail").innerHTML);
 				
-				let modalDetail = new bootstrap.Modal(document.querySelector("#boardDetailModal"));
-    			console.dir( modalDetail );
-    			
+				
+	
+				let modalDetail = new bootstrap.Modal(document.querySelector("#boardDetailModal"));			
 				modalDetail.hide();
 
+				// 파일업로드 관련 ui 초기화
+    			document.querySelector("#chkFileUploadUpdate").checked = false;
+   				document.querySelector("#inputFileUploadUpdate").value = "";
+   				document.querySelector("#imgFileUploadUpdateThumbnail").innerHTML = "";
+   				document.querySelector("#imgFileUploadUpdateWrapper").style.display = "none";
+   		
     			let modalUpdate = new bootstrap.Modal(document.querySelector("#boardUpdateModal"));
-    			
     			modalUpdate.show();
     		}
     		

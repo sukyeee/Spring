@@ -11,26 +11,32 @@ import com.ssafy.member.model.mapper.MemberMapper;
 @Service
 public class MemberServiceImpl implements MemberService {
 	
-	private MemberMapper memberDao;
+//	@Autowired
+//	private SqlSession sqlSession;
+	
+	private MemberMapper memberMapper;
 	
 	@Autowired
-	private MemberServiceImpl(MemberMapper memberDao) {
-		this.memberDao = memberDao;
+	private MemberServiceImpl(MemberMapper memberMapper) {
+		this.memberMapper = memberMapper;
 	}
 
 	@Override
 	public int idCheck(String userId) throws Exception {
-		return memberDao.idCheck(userId);
+//		return sqlSession.getMapper(MemberMapper.class).idCheck(userId);
+		return memberMapper.idCheck(userId);
 	}
 
 	@Override
 	public void joinMember(MemberDto memberDto) throws Exception {
-		memberDao.joinMember(memberDto);
+//		sqlSession.getMapper(MemberMapper.class).joinMember(memberDto);
+		memberMapper.joinMember(memberDto);
 	}
 
 	@Override
 	public MemberDto loginMember(Map<String, String> map) throws Exception {
-		return memberDao.loginMember(map);
+//		return sqlSession.getMapper(MemberMapper.class).loginMember(map);
+		return memberMapper.loginMember(map);
 	}
 
 }

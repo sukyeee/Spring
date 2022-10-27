@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import com.mycom.myboard.dto.BoardDto;
 import com.mycom.myboard.dto.BoardParamDto;
@@ -91,14 +92,15 @@ public class BoardController {
 	}
 	
 	@PostMapping(value="/boards")
-	private ResponseEntity<BoardResultDto> boardInsert( BoardDto boardDto, HttpSession session ){
+	private ResponseEntity<BoardResultDto> boardInsert( BoardDto boardDto, MultipartHttpServletRequest request ){
 		
 		System.out.println(boardDto);
 		// 현재 사용자의 userSeq를 session에서 획득, 전달
+		HttpSession session = request.getSession();
 		UserDto userDto = (UserDto) session.getAttribute("userDto"); // 현재 로그인되어서 상세 요청을 한 사용자 정보
 		boardDto.setUserSeq(userDto.getUserSeq()); // 사용자 seq
 		
-		BoardResultDto boardResultDto = service.boardInsert(boardDto);
+		BoardResultDto boardResultDto = service.boardInsert(boardDto, request);
 		
 		
 		if( boardResultDto.getResult() == SUCCESS ) {

@@ -44,6 +44,17 @@
 	        	   and b.board_id = #{boardId}
 		</select>
 		
+		<insert id="boardInsert" parameterType="com.mycom.myboard.dto.BoardDto" useGeneratedKeys="true" keyProperty="boardId" >
+		insert into board (  user_seq, title, content, reg_dt, read_count)
+		 VALUES ( #{userSeq}, #{title}, #{content}, now(), 0);
+	
+		</insert>
+		
+		<insert id="boardFileInsert" parameterType="com.mycom.myboard.dto.BoardFileDto" >
+			insert into board_file (board_id, file_name, file_size, file_content_type, file_url )
+			values( #{boardId}, #{fileName}, #{fileSize}, #{fileContentType}, #{fileUrl} )
+		</insert>
+		
 		<update id="boardUpdate" parameterType="com.mycom.myboard.dto.BoardDto" >
 			update board
 			   set title = #{title}
@@ -58,12 +69,7 @@
 		     where board_id = #{boardId} 		
 		</delete>
 		
-		<insert id="boardInsert" parameterType="com.mycom.myboard.dto.BoardDto" >
-			insert into board 
-			(  user_seq, title, content, reg_dt, read_count)
-			 VALUES ( #{userSeq}, #{title}, #{content}, now(), 0);
 	
-		</insert>
 		
 		
 </mapper>

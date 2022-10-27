@@ -30,7 +30,6 @@
 		<selectKey resultType="int" keyProperty="articleNo" order="AFTER">
 			select last_insert_id()
 		</selectKey>
-		<!--  <insert id="writeArticle" parameterType="boardDto"useGeneratedKeys="true" keyProperty="articleNo"> 이렇게 처리해도 됨 	-->
 	</insert>
 	
 	<insert id="registerFile" parameterType="boardDto">

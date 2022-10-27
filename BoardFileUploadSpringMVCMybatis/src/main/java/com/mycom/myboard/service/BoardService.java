@@ -1,5 +1,7 @@
 package com.mycom.myboard.service;
 
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+
 import com.mycom.myboard.dto.BoardDto;
 import com.mycom.myboard.dto.BoardParamDto;
 import com.mycom.myboard.dto.BoardResultDto;
@@ -14,14 +16,15 @@ public interface BoardService {
 	// 상세 
 	BoardResultDto boardDetail(BoardParamDto boardParamDto);
 	
+	// 삽입
+	BoardResultDto boardInsert(BoardDto boardDto, MultipartHttpServletRequest request);
+
 	// 수정
 	BoardResultDto boardUpdate(BoardDto boardDto);
 	
 	// 삭제
 	BoardResultDto boardDelete(int boardId);
 	
-	// 삽입
-	BoardResultDto boardInsert(BoardDto boardDto);
 
 
 }
