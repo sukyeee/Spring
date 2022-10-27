@@ -69,7 +69,10 @@
 		     where board_id = #{boardId} 		
 		</delete>
 		
-	
+		<delete id="boarFiledDelete" parameterType="int" >
+			delete from board_file
+		     where board_id = #{boardId} 		
+		</delete>
 		
 		
 </mapper>

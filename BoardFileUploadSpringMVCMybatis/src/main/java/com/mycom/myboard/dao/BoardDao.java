@@ -34,5 +34,5 @@ public interface BoardDao {
 	// 삭제
 	int boardDelete(int boardId);
 
-	
+	void boardFileDelete(int boardId);
 }

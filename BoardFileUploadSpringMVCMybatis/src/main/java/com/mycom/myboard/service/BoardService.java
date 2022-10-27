@@ -25,6 +25,4 @@ public interface BoardService {
 	// 삭제
 	BoardResultDto boardDelete(int boardId);
 	
-
-
 }
