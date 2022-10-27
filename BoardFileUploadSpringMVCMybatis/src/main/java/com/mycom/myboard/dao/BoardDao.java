@@ -35,4 +35,5 @@ public interface BoardDao {
 	int boardDelete(int boardId);
 
 	void boardFileDelete(int boardId);
+	List<String> boardFileUrlDeleteList(int boardId);
 }

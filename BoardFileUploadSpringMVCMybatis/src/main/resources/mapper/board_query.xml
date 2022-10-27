@@ -69,10 +69,17 @@
 		     where board_id = #{boardId} 		
 		</delete>
 		
-		<delete id="boarFiledDelete" parameterType="int" >
+		
+		<delete id="boardFileDelete" parameterType="int" >
 			delete from board_file
 		     where board_id = #{boardId} 		
 		</delete>
 		
+		
+		<select id="boardFileUrlDeleteList" parameterType="int" resultType="String">
+			select file_url 
+			  from board_file 
+	      	 where board_id = #{boardId}
+		</select>
 		
 </mapper>

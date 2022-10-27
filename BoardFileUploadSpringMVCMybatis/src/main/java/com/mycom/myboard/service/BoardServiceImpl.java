@@ -198,7 +198,8 @@ public class BoardServiceImpl implements BoardService{
 	    try {
 	        List<String> fileUrlList = dao.boardFileUrlDeleteList(boardId);
 	        for(String fileUrl : fileUrlList) {
-	            File file = new File(uploadPath + File.separator, fileUrl);                
+	            File file = new File(uploadPath + File.separator, fileUrl);          
+	            System.out.println(file);
 	            if(file.exists()) {
 	                file.delete();
 	            }
