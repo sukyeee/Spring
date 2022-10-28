@@ -1,12 +1,14 @@
 package com.mycom.myboard.service;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
 
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
@@ -88,6 +90,19 @@ public class BoardServiceImpl implements BoardService{
 		BoardResultDto boardResultDto = new BoardResultDto();
 		
 		try {
+			
+			// 현재 게시글을 현재 사용자가 읽었는지 ( visit ) 확인
+			// 안읽었으면 신규로 게시글 읽었다는 insert 하고, 게시글 조회수 +1 처리
+			// 읽었으면 무시 
+			
+			int userReadCount = dao.boardUserReadCount(boardParamDto);
+			if( userReadCount == 0 ) {
+				dao.boardUserReadInsert(boardParamDto.getBoardId(), boardParamDto.getUserSeq());
+				dao.boardReadCountUpdate(boardParamDto.getBoardId());
+			}
+			
+			
+			
 			// DB에서 게시글 정보를 가져온다.
 			 BoardDto boardDto = dao.boardDetail(boardParamDto);
 			 // 게시글 작성자와 현재 상세 조회하는 사용자의 동일인 여부 확인 
@@ -96,8 +111,15 @@ public class BoardServiceImpl implements BoardService{
 			 } else {
 				 boardDto.setSameUser(false);
 			 }
+			 
+			 // 해당 게시글에 대한 첨부파일 정보를 추가
+			 List<BoardFileDto> fileList = dao.boardDetailFileList(boardDto.getBoardId());
+			 boardDto.setFileList(fileList);
+			 
+			 
 			 // boardResultDto 의 일부인 boardDto 를 설정 
 			 boardResultDto.setDto(boardDto);
+			 
 			 boardResultDto.setResult(SUCCESS);
 	
 		} catch(Exception e) {
@@ -110,6 +132,7 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
+	@Transactional // DB transaction 정책 // 파일 저장 복구 원복 X
 	public BoardResultDto boardInsert(BoardDto boardDto, MultipartHttpServletRequest request) {
 		BoardResultDto boardResultDto = new BoardResultDto();
 		
@@ -126,6 +149,11 @@ public class BoardServiceImpl implements BoardService{
 			 if( ! uploadDir.exists() ) uploadDir.mkdir(); // 없으면 새로 생성
 			 
 			 List<MultipartFile> fileList = request.getFiles("file");
+			 
+			 
+			 // NullPointer 예외 발생
+//			 String str = null;
+//			 str.length();
 			 
 			 for (MultipartFile partFile : fileList) {
 				int boardId = boardDto.getBoardId(); // 직전 등록된 게시글의 key
@@ -160,27 +188,81 @@ public class BoardServiceImpl implements BoardService{
 			 
 			 boardResultDto.setResult(SUCCESS);
 	
-		} catch(Exception e) {
+		} catch(IOException e) {
+			
+			// 만약, 파일 저장 작업 중 오류가 발생하면 이곳 IOException catch block 의 코드가 실행됨.
+			// 2가지 작업이 필요
+			// #1. 예외 발생 이전에 저장된 파일을 모두 삭제 => 직접 물리적인 파일 삭제 작업 수행
+			// #2. 이전에 테이블에 등록된 작업 취소 => Spring 의 @Transaction 을 이용하기 위해 RuntimeException 계열의 예외를 발생 throw new RuntimeException();
 			e.printStackTrace();
 			boardResultDto.setResult(FAIL);
+			
+			throw new RuntimeException();	
 		}
 		
 		return boardResultDto;
 	}
 	
 	@Override
-	public BoardResultDto boardUpdate(BoardDto boardDto) {
+	@Transactional 
+	public BoardResultDto boardUpdate(BoardDto boardDto, MultipartHttpServletRequest request) {
 		BoardResultDto boardResultDto = new BoardResultDto();
 		
 		try {
-			// DB에서 게시글 정보를 가져온다.
-			 int ret = dao.boardUpdate(boardDto); // update 되는 건수 
-			 if( ret == 1 ) {
-				 boardResultDto.setResult(SUCCESS);
-			 } else {
-				 // boardResultDto 의 일부인 boardDto 를 설정 
-				 boardResultDto.setResult(FAIL);
+			
+			
+			dao.boardUpdate(boardDto);
+			
+			 File uploadDir = new File(uploadPath + File.separator + uploadFolder);
+			 if( ! uploadDir.exists() ) uploadDir.mkdir(); // 없으면 새로 생성
+	
+			 // 기존 첨부된 물리적인 파일 삭제, 첨부 파일이 여러개 감안 
+			 List<String> fileUrlList = dao.boardFileUrlDeleteList(boardDto.getBoardId());
+			 for (String fileUrl : fileUrlList) { 
+				File file = new File(uploadPath + File.separator + fileUrl ); // fileUrl 은 upload/... 형태
+				if( file.exists() ) {
+					file.delete();
+				}
+			}
+			
+			 // 테이블에서 게시판 파일 삭제
+			 dao.boardFileDelete(boardDto.getBoardId());
+			 
+			 // 수정과정에 새로 추가된 첨부 파일 등록
+			 
+			 List<MultipartFile> fileList = request.getFiles("file");
+			 
+			 for (MultipartFile partFile : fileList) {
+				int boardId = boardDto.getBoardId(); // 직전 등록된 게시글의 key
+				String fileName = partFile.getOriginalFilename(); // 첨부된 원래 파일 명, 이 이름으로는 바로 저장하지 않고 UUID 를 이용해서 중복 불가한 파일 이름을 만든다.
+				
+				// Random UUID File id
+				UUID uuid = UUID.randomUUID(); // 대체될 파일이름
+				
+				// 파일 확장자
+				String extension = FilenameUtils.getExtension(fileName); // 원래 파일의 확장자만 추출 
+				
+				// 실제 저장할 파일 전체 이름은
+				String savingFileName = uuid + "." + extension;
+				
+				File destFile = new File(uploadPath + File.separator + uploadFolder + File.separator + savingFileName);
+				
+				// 파일 객체를 통해서 파일을 저장
+				partFile.transferTo(destFile);
+				
+				
+				// 테이블에 첨부파일 정보 저장 
+				BoardFileDto boardFileDto = new BoardFileDto();
+				boardFileDto.setBoardId(boardId);
+				boardFileDto.setFileName(fileName);
+				boardFileDto.setFileSize(partFile.getSize());
+				boardFileDto.setFileContentType(partFile.getContentType());
+				boardFileDto.setFileUrl(uploadFolder + "/" + savingFileName);
+				
+				dao.boardFileInsert(boardFileDto);
+			 
 			 }
+			 boardResultDto.setResult(SUCCESS);
 	
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -191,6 +273,7 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
+	@Transactional 
 	public BoardResultDto boardDelete(int boardId) {
 	    
 	    BoardResultDto boardResultDto = new BoardResultDto();
@@ -206,8 +289,10 @@ public class BoardServiceImpl implements BoardService{
 	        }
 	        
 	        // 삭제 순서
-	        dao.boardFileDelete(boardId);
-	        dao.boardDelete(boardId);        
+	        dao.boardFileDelete(boardId); // 첨부 파일 삭제 우선 
+	        dao.boardReadCountDelete(boardId);
+	        dao.boardDelete(boardId);     // 마지막으로 게시판 삭제 
+	    
 	        boardResultDto.setResult(SUCCESS);
 	        
 	    }catch(Exception e) {

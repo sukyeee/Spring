@@ -150,6 +150,10 @@
                 		<tr><td>작성자</td><td id="userNameDetail">#</td></tr>
                 		<tr><td>작성일시</td><td id="regDtDetail">#</td></tr>
                 		<tr><td>조회수</td><td id="readCountDetail">#</td></tr>                    
+                	
+               			<!-- 첨부 파일 -->
+               			<tr><td colspan="2">첨부파일</td></tr>
+                		<tr><td colspan="2" id="fileListDetail">#</td></tr>
                 	</tbody>
             	</table>
             	
@@ -374,6 +378,9 @@
     		//let urlParams = `?limit=${LIST_ROW_COUNT}&offset=${OFFSET}`; // jsp el 표기법과 javascript es6 literal template 과 충돌
     		let fetchOptions = {
     			method: 'GET',
+    			headers: {
+    				'async': 'true'
+    			}
     		}
     		
     		try{
@@ -381,7 +388,11 @@
     			let data = await response.json();
     			console.log( data );
     			
-    			if( data.result == SUCCESS ){
+    			if( data.result == "login" ){
+    				// sendRedirect와 동일 효과
+    				window.location.href="<%=contextPath%>/login"; 
+    			}
+    			else if( data.result == SUCCESS ){
     				makeListHtml(data.list);
     				// 총건수를 이미 가져왔으므로 바로 처리
     				TOTAL_LIST_ITEM_COUNT = data.count; // 총건수
@@ -426,27 +437,7 @@
     		})
     	}
     	
-    	// GET
-    	async function boardListTotalCnt(){
-    		let url = '<%= contextPath %>/board/boardListTotalCnt';
-    		let urlParams = '?searchWord=' + SEARCH_WORD;
-    		//let urlParams = `?limit=${LIST_ROW_COUNT}&offset=${OFFSET}`; // jsp el 표기법과 javascript es6 literal template 과 충돌
-    		let fetchOptions = {
-    			method: 'GET',
-    		}
-    		
-    		try{
-    			let response = await fetch( url + urlParams, fetchOptions);
-    			let data = await response.json();
-    			console.log( data );
-    			TOTAL_LIST_ITEM_COUNT = data.totalCnt;
-    			makePaginationHtml( LIST_ROW_COUNT, PAGE_LINK_COUNT, CURRENT_PAGE_INDEX, TOTAL_LIST_ITEM_COUNT, "paginationWrapper" );
-    			
-    		}catch( error ){
-    			console.log(error);
-    			alertify.error('글 조회 과정에서 문제가 생겼습니다.')
-    		}
-    	}
+    
     	
     	function movePage(pageIndex){
     		OFFSET = (pageIndex - 1) * LIST_ROW_COUNT;
@@ -460,6 +451,9 @@
     		let url = '<%= contextPath %>/boards/' + boardId; // path variable
     		let fetchOptions = {
     			method: 'GET',
+    			headers: {
+    				'async': 'true'
+    			}
     		}
     		
     		try{
@@ -467,7 +461,11 @@
     			let data = await response.json();
     			console.log( data );
     			
-    			if( data.result == SUCCESS ){
+    			if( data.result == "login" ){
+    				// sendRedirect와 동일 효과
+    				window.location.href="<%=contextPath%>/login"; 
+    			}
+    			else if( data.result == SUCCESS ){
     				makeDetailHtml( data.dto );
     			}else{
     				alertify.error('글 조회 과정에서 문제가 생겼습니다.')
@@ -491,6 +489,10 @@
 			let readCount = detail.readCount;
 			let sameUser = detail.sameUser;
 
+			// 첨부파일
+			let fileList = detail.fileList;
+			
+			// 화면 구성 
 			document.querySelector("#boardDetailModal").setAttribute("data-boardId", boardId );
     		document.querySelector("#boardIdDetail").innerHTML = boardId;
     		document.querySelector("#titleDetail").innerHTML = title;
@@ -498,6 +500,34 @@
     		document.querySelector("#userNameDetail").innerHTML = userName;
     		document.querySelector("#regDtDetail").innerHTML = regDtStr;
     		document.querySelector("#readCountDetail").innerHTML = readCount;
+    		
+    		// 첨부파일 화면 구성
+    		let fileListDetailHtml = ``;
+    		if( fileList.length > 0 ){ // 첨부 파일이 있으면 
+    			
+    			fileList.forEach( el => {
+    				let fileId = el.fileId;
+    				let fileName = el.fileName;
+    				let fileUrl = el.fileUrl;
+    				
+    				fileListDetailHtml += 
+    					`
+    					<div>
+    						<span class="fileName">\${fileName}</span>
+							&nbsp;&nbsp;
+							<a  type="button" 
+								class="btn btn-outline btn-default btn-xs"
+								data-fileId="\${fileId}" 
+								href="<%=staticPath%>\${fileUrl}"
+								download="\${fileName}"
+							>내려받기</a>
+    					</div>
+    					`
+    			} );
+    		}
+    		
+    		
+    		document.querySelector("#fileListDetail").innerHTML = fileListDetailHtml;
     		
     		if( sameUser ){
     			document.querySelector("#btnBoardUpdateForm").style.display = "inline-block";
@@ -558,15 +588,24 @@
 	         // fetch options
 	         let fetchOptions = {
 	           method: "POST",
-	           body: formData
+	           body: formData,
+	           headers: {
+   				'async': 'true'
+   				}
 	         }    	
 	         
 	          try{
 		          let response = await fetch( url, fetchOptions);
 		          let data = await response.json(); // json => javascript object <= JSON.parse()
-		          if( data.result == SUCCESS){ // login.jsp => boardMain.jsp 로 페이지 이동 ( 새로운 페이지(html....) 요청)
-		            alertify.success('글이 등록되었습니다.');
-		            boardList();
+		         
+		          
+			      	if( data.result == "login" ){
+	    				// sendRedirect와 동일 효과
+	    				window.location.href="<%=contextPath%>/login"; 
+	    			}
+			      	else if( data.result == SUCCESS){ // login.jsp => boardMain.jsp 로 페이지 이동 ( 새로운 페이지(html....) 요청)
+			            alertify.success('글이 등록되었습니다.');
+			            boardList();
 		          }else {
 		        	  alertify.error('글 등록 과정에서 오류가 발생했습니다.');
 		          }            	
@@ -657,7 +696,12 @@
 	         try{
 		          let response = await fetch( url, fetchOptions);
 		          let data = await response.json(); // json => javascript object <= JSON.parse()
-		          if( data.result == SUCCESS){ // login.jsp => boardMain.jsp 로 페이지 이동 ( 새로운 페이지(html....) 요청)
+		         
+			      	if( data.result == "login" ){
+	    				// sendRedirect와 동일 효과
+	    				window.location.href="<%=contextPath%>/login"; 
+	    			}
+			      	else if( data.result == SUCCESS){ // login.jsp => boardMain.jsp 로 페이지 이동 ( 새로운 페이지(html....) 요청)
 		            alertify.success('글이 수정되었습니다.');
 		            boardList();
 		          }else {
@@ -712,7 +756,12 @@
             try{
                 let response = await fetch( url, fetchOptions ); // default GET
                 let data = await response.json(); // json => javascript object <= JSON.parse()
-                if( data.result == SUCCESS){ // login.jsp => boardMain.jsp 로 페이지 이동 ( 새로운 페이지(html....) 요청)
+             
+            	if( data.result == "login" ){
+    				// sendRedirect와 동일 효과
+    				window.location.href="<%=contextPath%>/login"; 
+    			}
+            	else if( data.result == SUCCESS){ // login.jsp => boardMain.jsp 로 페이지 이동 ( 새로운 페이지(html....) 요청)
                   alertify.success('글이 삭제되었습니다.');
                   boardList();
                 }else {

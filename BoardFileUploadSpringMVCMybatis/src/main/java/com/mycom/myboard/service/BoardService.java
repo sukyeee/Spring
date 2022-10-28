@@ -20,7 +20,7 @@ public interface BoardService {
 	BoardResultDto boardInsert(BoardDto boardDto, MultipartHttpServletRequest request);
 
 	// 수정
-	BoardResultDto boardUpdate(BoardDto boardDto);
+	BoardResultDto boardUpdate(BoardDto boardDto, MultipartHttpServletRequest request);
 	
 	// 삭제
 	BoardResultDto boardDelete(int boardId);

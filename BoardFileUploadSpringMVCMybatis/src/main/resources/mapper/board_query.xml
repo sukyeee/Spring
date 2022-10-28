@@ -44,6 +44,12 @@
 	        	   and b.board_id = #{boardId}
 		</select>
 		
+		<select id="boardDetailFileList" parameterType="int" resultType="com.mycom.myboard.dto.BoardFileDto" >
+			select file_id, board_id, file_name, file_size, file_content_type, file_url, reg_dt
+			  from board_file
+			 where board_id = #{boardId}
+		</select>
+		
 		<insert id="boardInsert" parameterType="com.mycom.myboard.dto.BoardDto" useGeneratedKeys="true" keyProperty="boardId" >
 		insert into board (  user_seq, title, content, reg_dt, read_count)
 		 VALUES ( #{userSeq}, #{title}, #{content}, now(), 0);
@@ -63,6 +69,11 @@
 		
 		</update>
 		
+		<select id="boardFileUrlDeleteList" parameterType="int" resultType="String">
+			select file_url 
+			  from board_file 
+	      	 where board_id = #{boardId}
+		</select>
 		
 		<delete id="boardDelete" parameterType="int" >
 			delete from board
@@ -76,10 +87,27 @@
 		</delete>
 		
 		
-		<select id="boardFileUrlDeleteList" parameterType="int" resultType="String">
-			select file_url 
-			  from board_file 
-	      	 where board_id = #{boardId}
+		<!-- 조회수 -->
+		<select id="boardUserReadCount" parameterType="map" resultType="int">
+			select count(*) from board_user_read
+			 where board_id = #{boardId}
+			   and user_seq = #{userSeq}
 		</select>
+		
+		<insert id="boardUserReadInsert" parameterType="map">
+			insert into board_user_read (board_id, user_seq)
+					values ( #{boardId}, #{userSeq} )
+		</insert>
+		
+		<update id="boardReadCountUpdate" parameterType="int">
+			update board
+			   set read_count = read_count + 1
+			 where board_id = #{boardId}
+		</update>
+		
+		<delete id="boardReadCountDelete" parameterType="int">
+			delete from board_user_read
+			 where board_id = #{boardId}
+		</delete>
 		
 </mapper>
