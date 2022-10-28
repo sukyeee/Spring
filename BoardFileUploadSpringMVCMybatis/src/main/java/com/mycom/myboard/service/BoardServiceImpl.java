@@ -209,8 +209,7 @@ public class BoardServiceImpl implements BoardService{
 		BoardResultDto boardResultDto = new BoardResultDto();
 		
 		try {
-			
-			
+		
 			dao.boardUpdate(boardDto);
 			
 			 File uploadDir = new File(uploadPath + File.separator + uploadFolder);
