@@ -110,4 +110,13 @@ public class BoardController {
 		}
 	}
 	
+	@GetMapping(value= "/profile")
+	private ResponseEntity<UserDto> getProfile( HttpSession session ){
+		
+		UserDto dto = (UserDto) session.getAttribute("userDto");
+		
+		return new ResponseEntity<UserDto>(dto, HttpStatus.OK);
+		
+	}
+	
 }

@@ -25,3 +25,167 @@
 2022-11-02 00:16:26.878  INFO 14800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2022-11-02 00:16:26.882  INFO 14800 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : Started BoardFileUploadSpringBootMybatisApplication in 0.645 seconds (JVM running for 5762.306)
 2022-11-02 00:16:26.883  INFO 14800 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 00:17:27.926  INFO 14800 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-02 00:17:27.928  INFO 14800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-02 00:17:27.931  INFO 14800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-11-02 00:17:30.003  INFO 14800 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2022-11-02 00:17:30.023  INFO 14800 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2022-11-02 00:17:30.352 DEBUG 14800 --- [http-nio-8080-exec-1] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: select b.board_id, b.user_seq, u.user_name, u.user_profile_image_url, b.title, b.content, b.reg_dt, b.read_count from BOARD b, USERS u where b.user_seq = u.user_seq order by b.board_id desc limit ? offset ?
+2022-11-02 00:17:30.353 DEBUG 14800 --- [http-nio-8080-exec-1] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-02 00:17:30.359 DEBUG 14800 --- [http-nio-8080-exec-1] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-02 00:17:30.360 DEBUG 14800 --- [http-nio-8080-exec-1] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: select count(*) from BOARD
+2022-11-02 00:17:30.361 DEBUG 14800 --- [http-nio-8080-exec-1] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-02 00:17:30.366 DEBUG 14800 --- [http-nio-8080-exec-1] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-02 00:17:31.320 DEBUG 14800 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardUserReadCount    : ==>  Preparing: select count(*) from board_user_read where board_id = ? and user_seq = ?
+2022-11-02 00:17:31.321 DEBUG 14800 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardUserReadCount    : ==> Parameters: 32(Integer), 1(Integer)
+2022-11-02 00:17:31.332 DEBUG 14800 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardUserReadCount    : <==      Total: 1
+2022-11-02 00:17:31.334 DEBUG 14800 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardUserReadInsert   : ==>  Preparing: insert into board_user_read (board_id, user_seq) values ( ?, ? )
+2022-11-02 00:17:31.334 DEBUG 14800 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardUserReadInsert   : ==> Parameters: 32(Integer), 1(Integer)
+2022-11-02 00:17:31.348 DEBUG 14800 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardUserReadInsert   : <==    Updates: 1
+2022-11-02 00:17:31.349 DEBUG 14800 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardReadCountUpdate  : ==>  Preparing: update board set read_count = read_count + 1 where board_id = ?
+2022-11-02 00:17:31.349 DEBUG 14800 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardReadCountUpdate  : ==> Parameters: 32(Integer)
+2022-11-02 00:17:31.355 DEBUG 14800 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardReadCountUpdate  : <==    Updates: 1
+2022-11-02 00:17:31.356 DEBUG 14800 --- [http-nio-8080-exec-4] c.m.myboard.dao.BoardDao.boardDetail     : ==>  Preparing: select b.board_id, b.user_seq, u.user_name, u.user_profile_image_url, b.title, b.content, b.reg_dt, b.read_count from BOARD b, USERS u where b.user_seq = u.user_seq and b.board_id = ?
+2022-11-02 00:17:31.357 DEBUG 14800 --- [http-nio-8080-exec-4] c.m.myboard.dao.BoardDao.boardDetail     : ==> Parameters: 32(Integer)
+2022-11-02 00:17:31.359 DEBUG 14800 --- [http-nio-8080-exec-4] c.m.myboard.dao.BoardDao.boardDetail     : <==      Total: 1
+2022-11-02 00:17:31.359 DEBUG 14800 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardDetailFileList   : ==>  Preparing: select file_id, board_id, file_name, file_size, file_content_type, file_url, reg_dt from board_file where board_id = ?
+2022-11-02 00:17:31.359 DEBUG 14800 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardDetailFileList   : ==> Parameters: 32(Integer)
+2022-11-02 00:17:31.364 DEBUG 14800 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardDetailFileList   : <==      Total: 0
+2022-11-02 00:17:33.739 DEBUG 14800 --- [http-nio-8080-exec-5] c.m.m.d.BoardDao.boardFileUrlDeleteList  : ==>  Preparing: select file_url from board_file where board_id = ?
+2022-11-02 00:17:33.740 DEBUG 14800 --- [http-nio-8080-exec-5] c.m.m.d.BoardDao.boardFileUrlDeleteList  : ==> Parameters: 32(Integer)
+2022-11-02 00:17:33.741 DEBUG 14800 --- [http-nio-8080-exec-5] c.m.m.d.BoardDao.boardFileUrlDeleteList  : <==      Total: 0
+2022-11-02 00:17:33.741 DEBUG 14800 --- [http-nio-8080-exec-5] c.m.m.dao.BoardDao.boardFileDelete       : ==>  Preparing: delete from board_file where board_id = ?
+2022-11-02 00:17:33.742 DEBUG 14800 --- [http-nio-8080-exec-5] c.m.m.dao.BoardDao.boardFileDelete       : ==> Parameters: 32(Integer)
+2022-11-02 00:17:33.746 DEBUG 14800 --- [http-nio-8080-exec-5] c.m.m.dao.BoardDao.boardFileDelete       : <==    Updates: 0
+2022-11-02 00:17:33.748 DEBUG 14800 --- [http-nio-8080-exec-5] c.m.m.dao.BoardDao.boardReadCountDelete  : ==>  Preparing: delete from board_user_read where board_id = ?
+2022-11-02 00:17:33.748 DEBUG 14800 --- [http-nio-8080-exec-5] c.m.m.dao.BoardDao.boardReadCountDelete  : ==> Parameters: 32(Integer)
+2022-11-02 00:17:33.751 DEBUG 14800 --- [http-nio-8080-exec-5] c.m.m.dao.BoardDao.boardReadCountDelete  : <==    Updates: 1
+2022-11-02 00:17:33.753 DEBUG 14800 --- [http-nio-8080-exec-5] c.m.myboard.dao.BoardDao.boardDelete     : ==>  Preparing: delete from board where board_id = ?
+2022-11-02 00:17:33.755 DEBUG 14800 --- [http-nio-8080-exec-5] c.m.myboard.dao.BoardDao.boardDelete     : ==> Parameters: 32(Integer)
+2022-11-02 00:17:33.761 DEBUG 14800 --- [http-nio-8080-exec-5] c.m.myboard.dao.BoardDao.boardDelete     : <==    Updates: 1
+2022-11-02 00:17:33.785 DEBUG 14800 --- [http-nio-8080-exec-6] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: select b.board_id, b.user_seq, u.user_name, u.user_profile_image_url, b.title, b.content, b.reg_dt, b.read_count from BOARD b, USERS u where b.user_seq = u.user_seq order by b.board_id desc limit ? offset ?
+2022-11-02 00:17:33.786 DEBUG 14800 --- [http-nio-8080-exec-6] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-02 00:17:33.794 DEBUG 14800 --- [http-nio-8080-exec-6] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-02 00:17:33.796 DEBUG 14800 --- [http-nio-8080-exec-6] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: select count(*) from BOARD
+2022-11-02 00:17:33.796 DEBUG 14800 --- [http-nio-8080-exec-6] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-02 00:17:33.801 DEBUG 14800 --- [http-nio-8080-exec-6] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-02 00:17:35.839 DEBUG 14800 --- [http-nio-8080-exec-7] c.m.m.dao.BoardDao.boardUserReadCount    : ==>  Preparing: select count(*) from board_user_read where board_id = ? and user_seq = ?
+2022-11-02 00:17:35.839 DEBUG 14800 --- [http-nio-8080-exec-7] c.m.m.dao.BoardDao.boardUserReadCount    : ==> Parameters: 29(Integer), 1(Integer)
+2022-11-02 00:17:35.840 DEBUG 14800 --- [http-nio-8080-exec-7] c.m.m.dao.BoardDao.boardUserReadCount    : <==      Total: 1
+2022-11-02 00:17:35.841 DEBUG 14800 --- [http-nio-8080-exec-7] c.m.m.dao.BoardDao.boardUserReadInsert   : ==>  Preparing: insert into board_user_read (board_id, user_seq) values ( ?, ? )
+2022-11-02 00:17:35.841 DEBUG 14800 --- [http-nio-8080-exec-7] c.m.m.dao.BoardDao.boardUserReadInsert   : ==> Parameters: 29(Integer), 1(Integer)
+2022-11-02 00:17:35.845 DEBUG 14800 --- [http-nio-8080-exec-7] c.m.m.dao.BoardDao.boardUserReadInsert   : <==    Updates: 1
+2022-11-02 00:17:35.845 DEBUG 14800 --- [http-nio-8080-exec-7] c.m.m.dao.BoardDao.boardReadCountUpdate  : ==>  Preparing: update board set read_count = read_count + 1 where board_id = ?
+2022-11-02 00:17:35.846 DEBUG 14800 --- [http-nio-8080-exec-7] c.m.m.dao.BoardDao.boardReadCountUpdate  : ==> Parameters: 29(Integer)
+2022-11-02 00:17:35.849 DEBUG 14800 --- [http-nio-8080-exec-7] c.m.m.dao.BoardDao.boardReadCountUpdate  : <==    Updates: 1
+2022-11-02 00:17:35.849 DEBUG 14800 --- [http-nio-8080-exec-7] c.m.myboard.dao.BoardDao.boardDetail     : ==>  Preparing: select b.board_id, b.user_seq, u.user_name, u.user_profile_image_url, b.title, b.content, b.reg_dt, b.read_count from BOARD b, USERS u where b.user_seq = u.user_seq and b.board_id = ?
+2022-11-02 00:17:35.849 DEBUG 14800 --- [http-nio-8080-exec-7] c.m.myboard.dao.BoardDao.boardDetail     : ==> Parameters: 29(Integer)
+2022-11-02 00:17:35.850 DEBUG 14800 --- [http-nio-8080-exec-7] c.m.myboard.dao.BoardDao.boardDetail     : <==      Total: 1
+2022-11-02 00:17:35.851 DEBUG 14800 --- [http-nio-8080-exec-7] c.m.m.dao.BoardDao.boardDetailFileList   : ==>  Preparing: select file_id, board_id, file_name, file_size, file_content_type, file_url, reg_dt from board_file where board_id = ?
+2022-11-02 00:17:35.851 DEBUG 14800 --- [http-nio-8080-exec-7] c.m.m.dao.BoardDao.boardDetailFileList   : ==> Parameters: 29(Integer)
+2022-11-02 00:17:35.852 DEBUG 14800 --- [http-nio-8080-exec-7] c.m.m.dao.BoardDao.boardDetailFileList   : <==      Total: 0
+2022-11-02 00:17:38.967 DEBUG 14800 --- [http-nio-8080-exec-8] c.m.myboard.dao.BoardDao.boardUpdate     : ==>  Preparing: update board set title = ? ,content = ? where board_id = ?
+2022-11-02 00:17:38.968 DEBUG 14800 --- [http-nio-8080-exec-8] c.m.myboard.dao.BoardDao.boardUpdate     : ==> Parameters: 24234(String), <p>undefined</p>(String), 29(Integer)
+2022-11-02 00:17:38.969 DEBUG 14800 --- [http-nio-8080-exec-8] c.m.myboard.dao.BoardDao.boardUpdate     : <==    Updates: 1
+2022-11-02 00:17:38.971 DEBUG 14800 --- [http-nio-8080-exec-8] c.m.m.d.BoardDao.boardFileUrlDeleteList  : ==>  Preparing: select file_url from board_file where board_id = ?
+2022-11-02 00:17:38.971 DEBUG 14800 --- [http-nio-8080-exec-8] c.m.m.d.BoardDao.boardFileUrlDeleteList  : ==> Parameters: 29(Integer)
+2022-11-02 00:17:38.972 DEBUG 14800 --- [http-nio-8080-exec-8] c.m.m.d.BoardDao.boardFileUrlDeleteList  : <==      Total: 0
+2022-11-02 00:17:38.972 DEBUG 14800 --- [http-nio-8080-exec-8] c.m.m.dao.BoardDao.boardFileDelete       : ==>  Preparing: delete from board_file where board_id = ?
+2022-11-02 00:17:38.972 DEBUG 14800 --- [http-nio-8080-exec-8] c.m.m.dao.BoardDao.boardFileDelete       : ==> Parameters: 29(Integer)
+2022-11-02 00:17:38.973 DEBUG 14800 --- [http-nio-8080-exec-8] c.m.m.dao.BoardDao.boardFileDelete       : <==    Updates: 0
+2022-11-02 00:17:38.987 DEBUG 14800 --- [http-nio-8080-exec-9] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: select b.board_id, b.user_seq, u.user_name, u.user_profile_image_url, b.title, b.content, b.reg_dt, b.read_count from BOARD b, USERS u where b.user_seq = u.user_seq order by b.board_id desc limit ? offset ?
+2022-11-02 00:17:38.988 DEBUG 14800 --- [http-nio-8080-exec-9] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-02 00:17:38.991 DEBUG 14800 --- [http-nio-8080-exec-9] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-02 00:17:38.992 DEBUG 14800 --- [http-nio-8080-exec-9] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: select count(*) from BOARD
+2022-11-02 00:17:38.992 DEBUG 14800 --- [http-nio-8080-exec-9] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-02 00:17:38.997 DEBUG 14800 --- [http-nio-8080-exec-9] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-02 00:17:49.537 DEBUG 14800 --- [http-nio-8080-exec-10] c.m.myboard.dao.BoardDao.boardInsert     : ==>  Preparing: insert into board ( user_seq, title, content, reg_dt, read_count) VALUES ( ?, ?, ?, now(), 0);
+2022-11-02 00:17:49.538 DEBUG 14800 --- [http-nio-8080-exec-10] c.m.myboard.dao.BoardDao.boardInsert     : ==> Parameters: 1(Integer), ff(String), <p>fff</p>(String)
+2022-11-02 00:17:49.540 DEBUG 14800 --- [http-nio-8080-exec-10] c.m.myboard.dao.BoardDao.boardInsert     : <==    Updates: 1
+2022-11-02 00:17:49.617  WARN 14800 --- [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException]
+2022-11-02 00:19:43.528  INFO 14800 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-11-02 00:19:43.964  INFO 14800 --- [RMI TCP Connection(2)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 00:19:43.967  INFO 14800 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-02 00:19:43.976  WARN 14800 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-4 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+2022-11-02 00:19:43.981  INFO 14800 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2022-11-02 00:19:43.993  INFO 14800 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2022-11-02 00:43:37.195  INFO 18056 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : Starting BoardFileUploadSpringBootMybatisApplication using Java 1.8.0_345 on DESKTOP-FC435OP with PID 18056 (D:\SSAFY\Spring\SpringBoot\BoardFileUploadSpringBootMybatis\bin\main started by uell0 in D:\SSAFY\Spring\SpringBoot\BoardFileUploadSpringBootMybatis)
+2022-11-02 00:43:37.226  INFO 18056 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 00:43:37.293  INFO 18056 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-02 00:43:37.293  INFO 18056 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-02 00:43:38.786  INFO 18056 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 00:43:38.799  INFO 18056 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 00:43:38.800  INFO 18056 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 00:43:38.925  INFO 18056 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 00:43:38.926  INFO 18056 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1632 ms
+2022-11-02 00:43:39.557  INFO 18056 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-11-02 00:43:39.917  INFO 18056 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 00:43:39.962  INFO 18056 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 00:43:39.975  INFO 18056 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : Started BoardFileUploadSpringBootMybatisApplication in 3.279 seconds (JVM running for 4.746)
+2022-11-02 00:44:07.514  INFO 18056 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-02 00:44:07.515  INFO 18056 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-02 00:44:07.517  INFO 18056 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-11-02 00:44:11.787  INFO 18056 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-02 00:44:12.187  INFO 18056 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-02 00:44:12.711 DEBUG 18056 --- [http-nio-8080-exec-2] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: select b.board_id, b.user_seq, u.user_name, u.user_profile_image_url, b.title, b.content, b.reg_dt, b.read_count from BOARD b, USERS u where b.user_seq = u.user_seq order by b.board_id desc limit ? offset ?
+2022-11-02 00:44:12.728 DEBUG 18056 --- [http-nio-8080-exec-2] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-02 00:44:12.758 DEBUG 18056 --- [http-nio-8080-exec-2] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-02 00:44:12.760 DEBUG 18056 --- [http-nio-8080-exec-2] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: select count(*) from BOARD
+2022-11-02 00:44:12.761 DEBUG 18056 --- [http-nio-8080-exec-2] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-02 00:44:12.772 DEBUG 18056 --- [http-nio-8080-exec-2] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-02 00:44:20.025 DEBUG 18056 --- [http-nio-8080-exec-9] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: select b.board_id, b.user_seq, u.user_name, u.user_profile_image_url, b.title, b.content, b.reg_dt, b.read_count from BOARD b, USERS u where b.user_seq = u.user_seq order by b.board_id desc limit ? offset ?
+2022-11-02 00:44:20.026 DEBUG 18056 --- [http-nio-8080-exec-9] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-02 00:44:20.042 DEBUG 18056 --- [http-nio-8080-exec-9] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-02 00:44:20.044 DEBUG 18056 --- [http-nio-8080-exec-9] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: select count(*) from BOARD
+2022-11-02 00:44:20.045 DEBUG 18056 --- [http-nio-8080-exec-9] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-02 00:44:20.050 DEBUG 18056 --- [http-nio-8080-exec-9] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-02 00:45:59.848 DEBUG 18056 --- [http-nio-8080-exec-10] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: select b.board_id, b.user_seq, u.user_name, u.user_profile_image_url, b.title, b.content, b.reg_dt, b.read_count from BOARD b, USERS u where b.user_seq = u.user_seq order by b.board_id desc limit ? offset ?
+2022-11-02 00:45:59.849 DEBUG 18056 --- [http-nio-8080-exec-10] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-02 00:45:59.853 DEBUG 18056 --- [http-nio-8080-exec-10] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-02 00:45:59.854 DEBUG 18056 --- [http-nio-8080-exec-10] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: select count(*) from BOARD
+2022-11-02 00:45:59.854 DEBUG 18056 --- [http-nio-8080-exec-10] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-02 00:45:59.858 DEBUG 18056 --- [http-nio-8080-exec-10] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-02 00:46:09.478 DEBUG 18056 --- [http-nio-8080-exec-6] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: select b.board_id, b.user_seq, u.user_name, u.user_profile_image_url, b.title, b.content, b.reg_dt, b.read_count from BOARD b, USERS u where b.user_seq = u.user_seq order by b.board_id desc limit ? offset ?
+2022-11-02 00:46:09.479 DEBUG 18056 --- [http-nio-8080-exec-6] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-02 00:46:09.484 DEBUG 18056 --- [http-nio-8080-exec-6] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-02 00:46:09.485 DEBUG 18056 --- [http-nio-8080-exec-6] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: select count(*) from BOARD
+2022-11-02 00:46:09.485 DEBUG 18056 --- [http-nio-8080-exec-6] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-02 00:46:09.488 DEBUG 18056 --- [http-nio-8080-exec-6] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-02 00:46:30.934  INFO 18056 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-02 00:46:31.314  INFO 18056 --- [Thread-6] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 00:46:31.315  INFO 18056 --- [Thread-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-02 00:46:31.321  WARN 18056 --- [Thread-6] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+2022-11-02 00:46:31.328  INFO 18056 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-02 00:46:31.344  INFO 18056 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-02 00:46:31.544  INFO 18056 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : Starting BoardFileUploadSpringBootMybatisApplication using Java 1.8.0_345 on DESKTOP-FC435OP with PID 18056 (D:\SSAFY\Spring\SpringBoot\BoardFileUploadSpringBootMybatis\bin\main started by uell0 in D:\SSAFY\Spring\SpringBoot\BoardFileUploadSpringBootMybatis)
+2022-11-02 00:46:31.544  INFO 18056 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 00:46:31.945  INFO 18056 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 00:46:31.946  INFO 18056 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 00:46:31.946  INFO 18056 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 00:46:31.968  INFO 18056 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 00:46:31.969  INFO 18056 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 422 ms
+2022-11-02 00:46:32.108  INFO 18056 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-11-02 00:46:32.196  INFO 18056 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 00:46:32.219  INFO 18056 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 00:46:32.226  INFO 18056 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : Started BoardFileUploadSpringBootMybatisApplication in 0.717 seconds (JVM running for 176.997)
+2022-11-02 00:46:32.229  INFO 18056 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 00:49:06.226  INFO 18056 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-11-02 00:49:06.708  INFO 18056 --- [RMI TCP Connection(2)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]

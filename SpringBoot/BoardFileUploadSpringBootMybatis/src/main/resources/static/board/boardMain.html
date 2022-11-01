@@ -222,20 +222,8 @@
     	window.onload = function(){
     		
     		initCKEditor(); // CKEditor 초기화
-    		
-			
-			// userProfileImg 가져오기
-
-		
-			 var userProfile = document.cookie[0];
-			 console.log(userProfile)
-			 document.querySelector("#userProfileImg").src = userProfile;
-			
-		
-			
-			
-			
-
+    	
+    		getProfile();
     		boardList();
     		
     		document.querySelector("#btnSearchWord").onclick = function(){
@@ -371,6 +359,25 @@
     					document.querySelector("#imgFileUploadUpdateThumbnail").insertAdjacentHTML("beforeend", thumbnailHTML);
     				}
     			} )
+    		}
+    	}
+    	
+		// userProfileImg 가져오기
+    	
+    	async function getProfile() {
+    		const url = "/profile";
+    		
+    		try {
+    			let response = await fetch(url);
+    			const data = await response.json();
+    			console.log(data);
+    			
+    			userProfileImg
+    			document.querySelector("#userProfileImg").src = data.userProfileImageUrl;
+    			
+    		}
+    		catch (error) {
+    			console.error(error)
     		}
     	}
     	
