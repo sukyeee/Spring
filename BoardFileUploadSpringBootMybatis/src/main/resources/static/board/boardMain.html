@@ -44,7 +44,7 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" href="#"><img id="userProfileImg"   
+                <a class="navbar-brand" href="#"><img src="<%= staticPath + userDto.getUserProfileImageUrl()%>" 
                 	style="width: 24px; height: 24px; border-radius: 50%;"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -223,19 +223,6 @@
     		
     		initCKEditor(); // CKEditor 초기화
     		
-			
-			// userProfileImg 가져오기
-
-		
-			 var userProfile = document.cookie[0];
-			 console.log(userProfile)
-			 document.querySelector("#userProfileImg").src = userProfile;
-			
-		
-			
-			
-			
-
     		boardList();
     		
     		document.querySelector("#btnSearchWord").onclick = function(){
@@ -735,7 +722,7 @@
                 let response = await fetch( url ); // default GET
                 let data = await response.json(); // json => javascript object <= JSON.parse()
                 if( data.result == "success"){ // login.jsp => boardMain.jsp 로 페이지 이동 ( 새로운 페이지(html....) 요청)
-                  window.location.href = "/login";
+                  window.location.href = "/jsp/login.jsp";
                 }else if( data.result == "fail"){
               	  alertify.error('로그인과정에서 오류가 발생했습니다.');
                 }            	

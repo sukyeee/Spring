@@ -3,8 +3,6 @@ package com.mycom.myboard.controller;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,13 +30,6 @@ public class LoginController {
 			// session 에 userDto 를 저장 
 			// client 에게 성공 결과를 json 으로 전달
 			session.setAttribute("userDto", userDto);
-			
-			String userProfile = userDto.getUserProfileImageUrl();
-			Cookie cookie = new Cookie("userProfile", userProfile);
-			
-			
-			System.out.println("userProfile!:" + cookie.getValue());
-
 			map.put("result", "success");
 			return new ResponseEntity<Map<String,String>>(map, HttpStatus.OK);
 		}
