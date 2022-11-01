@@ -2557,3 +2557,18 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2022-11-01 14:22:18.996  INFO 15168 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2022-11-01 14:22:18.999  INFO 15168 --- [restartedMain] c.mycom.more.SpringBootMoreApplication   : Started SpringBootMoreApplication in 0.325 seconds (JVM running for 11078.739)
 2022-11-01 14:22:18.999  INFO 15168 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-01 14:26:08.201  INFO 15168 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 16 class path changes (0 additions, 16 deletions, 0 modifications)
+2022-11-01 14:26:08.255  INFO 15168 --- [Thread-99] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-01 14:26:10.071  INFO 15168 --- [restartedMain] c.mycom.more.SpringBootMoreApplication   : Starting SpringBootMoreApplication using Java 1.8.0_192 on DESKTOP-KVCQHCD with PID 15168 (C:\SSAFY\Spring\SpringBoot\SpringBootMore\bin\main started by SSAFY in C:\SSAFY\Spring\SpringBoot\SpringBootMore)
+2022-11-01 14:26:10.071  INFO 15168 --- [restartedMain] c.mycom.more.SpringBootMoreApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-11-01 14:26:10.208  INFO 15168 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-01 14:26:10.208  INFO 15168 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-01 14:26:10.208  INFO 15168 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-01 14:26:10.215  INFO 15168 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-11-01 14:26:10.215  INFO 15168 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 143 ms
+2022-11-01 14:26:10.359  INFO 15168 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-01 14:26:10.364  INFO 15168 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-01 14:26:10.367  INFO 15168 --- [restartedMain] c.mycom.more.SpringBootMoreApplication   : Started SpringBootMoreApplication in 0.311 seconds (JVM running for 11310.107)
+2022-11-01 14:26:10.367  INFO 15168 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-01 14:40:33.711  INFO 15168 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-11-01 14:40:33.784  INFO 15168 --- [RMI TCP Connection(2)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]

@@ -38,7 +38,7 @@
         
         <!-- CKEditor -->
         <script src="https://cdn.ckeditor.com/ckeditor5/35.2.1/classic/ckeditor.js"></script>
-        <link rel="stylesheet" href="<%= staticPath %>css/common.css" />
+        <link rel="stylesheet" href="/css/common.css" />
     </head>
     
     <body>
@@ -199,7 +199,7 @@
         </div>
       </div>
         
-    <script src="<%=staticPath %>/js/util.js"></script>
+    <script src="/js/util.js"></script>
     <script>
     	
     	var OFFSET = 0;
@@ -341,7 +341,7 @@
     				let reader = new FileReader();
     				reader.readAsDataURL(file); // 파일을 읽어들인다.
     				reader.onload = function(e){ // 파일을 다  읽으면
-    					let thumbnailHTML = `<img src="\${e.target.result}">`;
+    					let thumbnailHTML = `<img src="${e.target.result}">`;
     					document.querySelector("#imgFileUploadInsertThumbnail").insertAdjacentHTML("beforeend", thumbnailHTML);
     				}
     			} )
@@ -354,7 +354,7 @@
     				let reader = new FileReader();
     				reader.readAsDataURL(file); // 파일을 읽어들인다.
     				reader.onload = function(e){ // 파일을 다  읽으면
-    					let thumbnailHTML = `<img src="\${e.target.result}">`;
+    					let thumbnailHTML = `<img src="${e.target.result}">`;
     					document.querySelector("#imgFileUploadUpdateThumbnail").insertAdjacentHTML("beforeend", thumbnailHTML);
     				}
     			} )
@@ -373,7 +373,7 @@
     	
     	// GET
     	async function boardList(){
-    		let url = '<%= contextPath %>/boards';
+    		let url = '/boards';
     		let urlParams = '?limit=' + LIST_ROW_COUNT + '&offset=' + OFFSET + '&searchWord=' + SEARCH_WORD;
     		//let urlParams = `?limit=${LIST_ROW_COUNT}&offset=${OFFSET}`; // jsp el 표기법과 javascript es6 literal template 과 충돌
     		let fetchOptions = {
@@ -390,7 +390,7 @@
     			
     			if( data.result == "login" ){
     				// sendRedirect와 동일 효과
-    				window.location.href="<%=contextPath%>/login"; 
+    				window.location.href="/login"; 
     			}
     			else if( data.result == SUCCESS ){
     				makeListHtml(data.list);
@@ -418,7 +418,7 @@
     			let readCount = el.readCount;
     			
     			listHtml +=
-    				`<tr style="cursor:pointer" data-boardId=\${boardId}><td>\${boardId}</td><td>\${userName}</td><td>\${title}</td><td>\${regDtStr}</td><td>\${readCount}</td></tr>`;
+    				`<tr style="cursor:pointer" data-boardId=${boardId}><td>${boardId}</td><td>${userName}</td><td>${title}</td><td>${regDtStr}</td><td>${readCount}</td></tr>`;
     		});
     		
     		document.querySelector("#boardTbody").innerHTML = listHtml;
@@ -448,7 +448,7 @@
     	
     	// GET
     	async function boardDetail(boardId){
-    		let url = '<%= contextPath %>/boards/' + boardId; // path variable
+    		let url = '/boards/' + boardId; // path variable
     		let fetchOptions = {
     			method: 'GET',
     			headers: {
@@ -463,7 +463,7 @@
     			
     			if( data.result == "login" ){
     				// sendRedirect와 동일 효과
-    				window.location.href="<%=contextPath%>/login"; 
+    				window.location.href="/login"; 
     			}
     			else if( data.result == SUCCESS ){
     				makeDetailHtml( data.dto );
@@ -513,13 +513,13 @@
     				fileListDetailHtml += 
     					`
     					<div>
-    						<span class="fileName">\${fileName}</span>
+    						<span class="fileName">${fileName}</span>
 							&nbsp;&nbsp;
 							<a  type="button" 
 								class="btn btn-outline btn-default btn-xs"
-								data-fileId="\${fileId}" 
-								href="<%=staticPath%>\${fileUrl}"
-								download="\${fileName}"
+								data-fileId="${fileId}" 
+								href="${fileUrl}"
+								download="${fileName}"
 							>내려받기</a>
     					</div>
     					`
@@ -583,7 +583,7 @@
     		const fileArray = Array.from(files);
     		fileArray.forEach( file => formData.append("file", file ));
     		
-    		let url = "<%= contextPath%>/boards";
+    		let url = "/boards";
     		
 	         // fetch options
 	         let fetchOptions = {
@@ -601,7 +601,7 @@
 		          
 			      	if( data.result == "login" ){
 	    				// sendRedirect와 동일 효과
-	    				window.location.href="<%=contextPath%>/login"; 
+	    				window.location.href="/login"; 
 	    			}
 			      	else if( data.result == SUCCESS){ // login.jsp => boardMain.jsp 로 페이지 이동 ( 새로운 페이지(html....) 요청)
 			            alertify.success('글이 등록되었습니다.');
@@ -614,35 +614,6 @@
 		      }	         
     	}
         
-//         async function boardInsert(){
-//         	let title = document.querySelector("#titleInsert").value;
-//             let content = CKEditorInsert.getData();
-
-//             // parameter 
-//             let urlParams = new URLSearchParams({
-//               title: title,
-//               content: content
-//             });
-//             // fetch options
-//             let fetchOptions = {
-//               method: "POST",
-//               body: urlParams
-//             }
-
-<%--             let url = "<%= contextPath%>/boards"; --%>
-//             try{
-//                 let response = await fetch( url, fetchOptions);
-//                 let data = await response.json(); // json => javascript object <= JSON.parse()
-//                 if( data.result == SUCCESS){ // login.jsp => boardMain.jsp 로 페이지 이동 ( 새로운 페이지(html....) 요청)
-//                   alertify.success('글이 등록되었습니다.');
-//                   boardList();
-//                 }else {
-//               	  alertify.error('글 등록 과정에서 오류가 발생했습니다.');
-//                 }            	
-//             }catch(error){
-//             	alertify.error('글 등록 과정에서 오류가 발생했습니다.');
-//             }
-//         }
         
         function validateUpdate(){
             // return true / false
@@ -685,7 +656,7 @@
     		const fileArray = Array.from(files);
     		fileArray.forEach( file => formData.append("file", file ));
     		
-    		let url = "<%= contextPath%>/boards/" + boardId;
+    		let url = "/boards/" + boardId;
     		
 	         // fetch options
 	         let fetchOptions = {
@@ -699,7 +670,7 @@
 		         
 			      	if( data.result == "login" ){
 	    				// sendRedirect와 동일 효과
-	    				window.location.href="<%=contextPath%>/login"; 
+	    				window.location.href="/login"; 
 	    			}
 			      	else if( data.result == SUCCESS){ // login.jsp => boardMain.jsp 로 페이지 이동 ( 새로운 페이지(html....) 요청)
 		            alertify.success('글이 수정되었습니다.');
@@ -712,41 +683,10 @@
 		      }	         
     	}
         
-//         async function boardUpdate(){
-//         	let boardId = document.querySelector("#boardUpdateModal").getAttribute("data-boardId");
-//         	let title = document.querySelector("#titleUpdate").value;
-//             let content = CKEditorUpdate.getData();
-
-//             // parameter 
-//             let urlParams = new URLSearchParams({
-//               boardId: boardId,
-//               title: title,
-//               content: content
-//             });
-//             // fetch options
-//             let fetchOptions = {
-//               method: "POST",
-//               body: urlParams
-//             }
-
-<%--             let url = "<%= contextPath%>/boards/" + boardId; --%>
-//             try{
-//                 let response = await fetch( url, fetchOptions);
-//                 let data = await response.json(); // json => javascript object <= JSON.parse()
-//                 if( data.result == SUCCESS){ // login.jsp => boardMain.jsp 로 페이지 이동 ( 새로운 페이지(html....) 요청)
-//                   alertify.success('글이 수정되었습니다.');
-//                   boardList();
-//                 }else{
-//               	  alertify.error('글 수정 과정에서 오류가 발생했습니다.');
-//                 }            	
-//             }catch(error){
-//             	alertify.error('글 수정 과정에서 오류가 발생했습니다.');
-//             }
-//         }
         
         async function boardDelete(){
         	let boardId = document.querySelector("#boardDetailModal").getAttribute("data-boardId");
-        	let url = "<%= contextPath%>/boards/" + boardId;
+        	let url = "/boards/" + boardId;
         	
         	// fetch options
             let fetchOptions = {
@@ -759,7 +699,7 @@
              
             	if( data.result == "login" ){
     				// sendRedirect와 동일 효과
-    				window.location.href="<%=contextPath%>/login"; 
+    				window.location.href="/login"; 
     			}
             	else if( data.result == SUCCESS){ // login.jsp => boardMain.jsp 로 페이지 이동 ( 새로운 페이지(html....) 요청)
                   alertify.success('글이 삭제되었습니다.');
@@ -776,13 +716,13 @@
         async function logout(){
         	// logout 요청 => 벡앤드에서는 session.invalidate(); result:success
         	// result 가 success => login 페이지 이동 (ajax X , window.location.href 로 이동)
-        	let url = "<%= contextPath%>/logout";
+        	let url = "/logout";
         	
         	try{
                 let response = await fetch( url ); // default GET
                 let data = await response.json(); // json => javascript object <= JSON.parse()
                 if( data.result == "success"){ // login.jsp => boardMain.jsp 로 페이지 이동 ( 새로운 페이지(html....) 요청)
-                  window.location.href = "<%= contextPath%>/jsp/login.jsp";
+                  window.location.href = "/jsp/login.jsp";
                 }else if( data.result == "fail"){
               	  alertify.error('로그인과정에서 오류가 발생했습니다.');
                 }            	
