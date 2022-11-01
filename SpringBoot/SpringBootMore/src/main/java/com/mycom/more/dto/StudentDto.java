@@ -18,11 +18,10 @@ public class StudentDto {
 
 	
 	// 이게 우선시됨 
-	public void setStudentNm(String studentNm) {
-		this.studentNm = studentNm;
-	}
-	
-
+//	public void setStudentNm(String studentNm) {
+//		this.studentNm = studentNm;
+//	}
+//	
 
 	private int studentId;
 	private String studentNm;
