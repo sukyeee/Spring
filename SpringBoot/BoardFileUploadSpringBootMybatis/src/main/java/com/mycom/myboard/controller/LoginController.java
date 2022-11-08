@@ -30,7 +30,6 @@ public class LoginController {
 		Map<String, String> map = new HashMap<>();
 		if( userDto != null ) {
 			// session 에 userDto 를 저장 
-			// client 에게 성공 결과를 json 으로 전달
 			session.setAttribute("userDto", userDto);
 			
 			String userProfile = userDto.getUserProfileImageUrl();
@@ -39,7 +38,15 @@ public class LoginController {
 			
 			System.out.println("userProfile!:" + cookie.getValue());
 
+			// client 에게 성공 결과를 json 으로 전달
 			map.put("result", "success");
+			
+			// html 로 client 를 구성하므로 html에서 server session에 접근X
+			// 로그인 성공 직후에 client 에게 client가 필요로 하는 사용자 정보를 내려줘야 한다.
+			
+	         map.put("userName", userDto.getUserName());
+	         map.put("userProfileImageUrl", userDto.getUserProfileImageUrl());
+
 			return new ResponseEntity<Map<String,String>>(map, HttpStatus.OK);
 		}
 		

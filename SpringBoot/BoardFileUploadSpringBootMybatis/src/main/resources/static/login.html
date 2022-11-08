@@ -44,9 +44,16 @@
     </div>
 
   </div>
-
+    
+  <script src="/js/util.js"></script>
   <script>
     window.onload = function(){
+    	
+    	// sessionStorage 초기화 
+    	destroyUserInfo();
+    	
+    	
+    	
       document.querySelector("#btnLogin").onclick = function(){
         let userEmailValue = document.querySelector("#userEmail").value;
         let userPasswordValue = document.querySelector("#userPassword").value;
@@ -108,7 +115,11 @@
       let response = await fetch( "/login", fetchOptions);
       let data = await response.json(); // json => javascript object <= JSON.parse()
       if( data.result == "success"){ // login.jsp => boardMain.jsp 로 페이지 이동 ( 새로운 페이지(html....) 요청)
-        window.location.href = "/board"
+      	// server 로부터 받은 사용자 정보를 저장/사용
+               // server 로부터 받은 사용자 정보를 저장/사용
+          sessionStorage.setItem("userName", data.userName);
+
+      window.location.href = "/board"
       }else if( data.result == "fail"){
     	  alertify.error('아이디 또는 패스워드를 확인하세요.');
       }

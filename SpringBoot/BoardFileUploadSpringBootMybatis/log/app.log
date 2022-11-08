@@ -189,3 +189,185 @@
 2022-11-02 00:46:32.229  INFO 18056 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
 2022-11-02 00:49:06.226  INFO 18056 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
 2022-11-02 00:49:06.708  INFO 18056 --- [RMI TCP Connection(2)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 13:45:05.702  INFO 1664 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : Starting BoardFileUploadSpringBootMybatisApplication using Java 1.8.0_345 on DESKTOP-FC435OP with PID 1664 (D:\SSAFY\Spring\SpringBoot\BoardFileUploadSpringBootMybatis\bin\main started by uell0 in D:\SSAFY\Spring\SpringBoot\BoardFileUploadSpringBootMybatis)
+2022-11-02 13:45:05.715  INFO 1664 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 13:45:05.870  INFO 1664 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-02 13:45:05.871  INFO 1664 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-02 13:45:08.614  INFO 1664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 13:45:08.639  INFO 1664 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 13:45:08.640  INFO 1664 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 13:45:08.806  INFO 1664 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 13:45:08.807  INFO 1664 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2931 ms
+2022-11-02 13:45:10.558  INFO 1664 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-11-02 13:45:11.029  INFO 1664 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 13:45:11.160  INFO 1664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 13:45:11.180  INFO 1664 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : Started BoardFileUploadSpringBootMybatisApplication in 6.559 seconds (JVM running for 10.193)
+2022-11-02 13:45:14.034  INFO 1664 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-02 13:45:14.037  INFO 1664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-02 13:45:14.043  INFO 1664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-11-02 13:45:18.085  INFO 1664 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-02 13:45:19.294  INFO 1664 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-02 13:45:20.184 DEBUG 1664 --- [http-nio-8080-exec-8] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: select b.board_id, b.user_seq, u.user_name, u.user_profile_image_url, b.title, b.content, b.reg_dt, b.read_count from BOARD b, USERS u where b.user_seq = u.user_seq order by b.board_id desc limit ? offset ?
+2022-11-02 13:45:20.205 DEBUG 1664 --- [http-nio-8080-exec-8] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-02 13:45:20.293 DEBUG 1664 --- [http-nio-8080-exec-8] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-02 13:45:20.301 DEBUG 1664 --- [http-nio-8080-exec-8] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: select count(*) from BOARD
+2022-11-02 13:45:20.302 DEBUG 1664 --- [http-nio-8080-exec-8] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-02 13:45:20.327 DEBUG 1664 --- [http-nio-8080-exec-8] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-02 13:49:31.688  INFO 1664 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-02 13:49:32.271  INFO 1664 --- [Thread-6] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 13:49:32.277  INFO 1664 --- [Thread-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-02 13:49:32.297  WARN 1664 --- [Thread-6] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+2022-11-02 13:49:32.311  INFO 1664 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-02 13:49:32.330  INFO 1664 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-02 13:49:32.640  INFO 1664 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : Starting BoardFileUploadSpringBootMybatisApplication using Java 1.8.0_345 on DESKTOP-FC435OP with PID 1664 (D:\SSAFY\Spring\SpringBoot\BoardFileUploadSpringBootMybatis\bin\main started by uell0 in D:\SSAFY\Spring\SpringBoot\BoardFileUploadSpringBootMybatis)
+2022-11-02 13:49:32.641  INFO 1664 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 13:49:33.376  INFO 1664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 13:49:33.377  INFO 1664 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 13:49:33.378  INFO 1664 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 13:49:33.408  INFO 1664 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 13:49:33.409  INFO 1664 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 754 ms
+2022-11-02 13:49:33.679  INFO 1664 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-11-02 13:49:33.803  INFO 1664 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 13:49:33.829  INFO 1664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 13:49:33.837  INFO 1664 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : Started BoardFileUploadSpringBootMybatisApplication in 1.294 seconds (JVM running for 272.848)
+2022-11-02 13:49:33.840  INFO 1664 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 13:53:23.973  INFO 18584 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : Starting BoardFileUploadSpringBootMybatisApplication using Java 1.8.0_345 on DESKTOP-FC435OP with PID 18584 (D:\SSAFY\Spring\SpringBoot\BoardFileUploadSpringBootMybatis\bin\main started by uell0 in D:\SSAFY\Spring\SpringBoot\BoardFileUploadSpringBootMybatis)
+2022-11-02 13:53:23.975  INFO 18584 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 13:53:24.071  INFO 18584 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-02 13:53:24.072  INFO 18584 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-02 13:53:25.943  INFO 18584 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 13:53:25.958  INFO 18584 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 13:53:25.958  INFO 18584 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 13:53:26.107  INFO 18584 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 13:53:26.108  INFO 18584 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2035 ms
+2022-11-02 13:53:27.007  INFO 18584 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-11-02 13:53:27.449  WARN 18584 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-11-02 13:53:27.483  WARN 18584 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2022-11-02 13:53:27.497  INFO 18584 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 13:53:27.519  INFO 18584 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-02 13:53:27.560 ERROR 18584 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2022-11-02 13:53:34.533  INFO 1664 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-02 13:53:34.536  INFO 1664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-02 13:53:34.538  INFO 1664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-02 13:53:36.150  INFO 1664 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-11-02 13:53:36.225  INFO 1664 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-11-02 13:53:37.567 DEBUG 1664 --- [http-nio-8080-exec-8] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: select b.board_id, b.user_seq, u.user_name, u.user_profile_image_url, b.title, b.content, b.reg_dt, b.read_count from BOARD b, USERS u where b.user_seq = u.user_seq order by b.board_id desc limit ? offset ?
+2022-11-02 13:53:37.568 DEBUG 1664 --- [http-nio-8080-exec-8] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-02 13:53:37.587 DEBUG 1664 --- [http-nio-8080-exec-8] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-02 13:53:37.588 DEBUG 1664 --- [http-nio-8080-exec-8] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: select count(*) from BOARD
+2022-11-02 13:53:37.589 DEBUG 1664 --- [http-nio-8080-exec-8] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-02 13:53:37.600 DEBUG 1664 --- [http-nio-8080-exec-8] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-02 13:55:44.499  INFO 1664 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-11-02 13:55:44.942  INFO 1664 --- [Thread-8] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 13:55:44.944  INFO 1664 --- [Thread-8] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-02 13:55:44.951  WARN 1664 --- [Thread-8] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-2 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+2022-11-02 13:55:44.958  INFO 1664 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-11-02 13:55:44.980  INFO 1664 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-11-02 13:55:45.252  INFO 1664 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : Starting BoardFileUploadSpringBootMybatisApplication using Java 1.8.0_345 on DESKTOP-FC435OP with PID 1664 (D:\SSAFY\Spring\SpringBoot\BoardFileUploadSpringBootMybatis\bin\main started by uell0 in D:\SSAFY\Spring\SpringBoot\BoardFileUploadSpringBootMybatis)
+2022-11-02 13:55:45.253  INFO 1664 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 13:55:45.896  INFO 1664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 13:55:45.898  INFO 1664 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 13:55:45.899  INFO 1664 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 13:55:45.927  INFO 1664 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 13:55:45.927  INFO 1664 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 670 ms
+2022-11-02 13:55:46.106  INFO 1664 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-11-02 13:55:46.212  INFO 1664 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 13:55:46.231  INFO 1664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 13:55:46.237  INFO 1664 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : Started BoardFileUploadSpringBootMybatisApplication in 1.058 seconds (JVM running for 645.249)
+2022-11-02 13:55:46.239  INFO 1664 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-02 13:55:54.022  INFO 11828 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : Starting BoardFileUploadSpringBootMybatisApplication using Java 1.8.0_345 on DESKTOP-FC435OP with PID 11828 (D:\SSAFY\Spring\SpringBoot\BoardFileUploadSpringBootMybatis\bin\main started by uell0 in D:\SSAFY\Spring\SpringBoot\BoardFileUploadSpringBootMybatis)
+2022-11-02 13:55:54.023  INFO 11828 --- [restartedMain] rdFileUploadSpringBootMybatisApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 13:55:54.136  INFO 11828 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-02 13:55:54.137  INFO 11828 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-02 13:55:56.988  INFO 11828 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 13:55:57.006  INFO 11828 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 13:55:57.006  INFO 11828 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-02 13:55:57.162  INFO 11828 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 13:55:57.164  INFO 11828 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3025 ms
+2022-11-02 13:55:58.232  INFO 11828 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-11-02 13:55:58.785  WARN 11828 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-11-02 13:55:58.878  WARN 11828 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2022-11-02 13:55:58.896  INFO 11828 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 13:55:58.938  INFO 11828 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-02 13:55:59.030 ERROR 11828 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2022-11-02 13:56:40.856  INFO 1664 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-02 13:56:40.861  INFO 1664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-02 13:56:40.864  INFO 1664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-11-02 13:56:42.410  INFO 1664 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-11-02 13:56:42.465  INFO 1664 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-11-02 13:56:43.828 DEBUG 1664 --- [http-nio-8080-exec-8] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: select b.board_id, b.user_seq, u.user_name, u.user_profile_image_url, b.title, b.content, b.reg_dt, b.read_count from BOARD b, USERS u where b.user_seq = u.user_seq order by b.board_id desc limit ? offset ?
+2022-11-02 13:56:43.834 DEBUG 1664 --- [http-nio-8080-exec-8] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-02 13:56:43.852 DEBUG 1664 --- [http-nio-8080-exec-8] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-02 13:56:43.854 DEBUG 1664 --- [http-nio-8080-exec-8] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: select count(*) from BOARD
+2022-11-02 13:56:43.855 DEBUG 1664 --- [http-nio-8080-exec-8] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-02 13:56:43.863 DEBUG 1664 --- [http-nio-8080-exec-8] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-02 13:56:54.865 DEBUG 1664 --- [http-nio-8080-exec-10] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: select b.board_id, b.user_seq, u.user_name, u.user_profile_image_url, b.title, b.content, b.reg_dt, b.read_count from BOARD b, USERS u where b.user_seq = u.user_seq order by b.board_id desc limit ? offset ?
+2022-11-02 13:56:54.866 DEBUG 1664 --- [http-nio-8080-exec-10] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-02 13:56:54.873 DEBUG 1664 --- [http-nio-8080-exec-10] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-02 13:56:54.874 DEBUG 1664 --- [http-nio-8080-exec-10] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: select count(*) from BOARD
+2022-11-02 13:56:54.874 DEBUG 1664 --- [http-nio-8080-exec-10] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-02 13:56:54.879 DEBUG 1664 --- [http-nio-8080-exec-10] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-02 15:44:46.343  INFO 1664 --- [RMI TCP Connection(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-11-02 15:44:46.343  INFO 1664 --- [RMI TCP Connection(4)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-11-02 15:44:46.796  INFO 1664 --- [RMI TCP Connection(4)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-02 15:44:46.802  INFO 1664 --- [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-02 15:44:46.811  WARN 1664 --- [RMI TCP Connection(4)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-3 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+2022-11-02 15:44:46.835  INFO 1664 --- [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-11-02 15:44:46.845  INFO 1664 --- [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.

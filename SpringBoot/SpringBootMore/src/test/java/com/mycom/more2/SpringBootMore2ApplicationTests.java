@@ -1,10 +1,10 @@
-package com.mycom.more;
+package com.mycom.more2;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringBootMoreApplicationTests {
+class SpringBootMore2ApplicationTests {
 
 	@Test
 	void contextLoads() {

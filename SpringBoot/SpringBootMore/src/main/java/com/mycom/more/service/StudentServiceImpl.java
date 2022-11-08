@@ -31,11 +31,7 @@ public class StudentServiceImpl implements StudentService{
 //	@Transactional // 비싼 어노테이션 ⇒ 반드시 필요한 경우에만 사용
 	public int insert(StudentDto dto) {
 		// TODO Auto-generated method stub
-//		dao.insert(dto);
-		
-//		String str = null;
-//		str.length();
-		
+//		dao.insert(dto);	
 		return dao.insert(dto);
 	}
 

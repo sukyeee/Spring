@@ -44,7 +44,7 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" href="#"><img id="userProfileImg"   
+                <a class="navbar-brand" href="#"><img id="imgUserProfileImageUrl"   
                 	style="width: 24px; height: 24px; border-radius: 50%;"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -221,9 +221,10 @@
     	
     	window.onload = function(){
     		
+    		initUserInfo();
     		initCKEditor(); // CKEditor 초기화
     	
-    		getProfile();
+//     		getProfile();
     		boardList();
     		
     		document.querySelector("#btnSearchWord").onclick = function(){
@@ -364,22 +365,22 @@
     	
 		// userProfileImg 가져오기
     	
-    	async function getProfile() {
-    		const url = "/profile";
+//     	async function getProfile() {
+//     		const url = "/profile";
     		
-    		try {
-    			let response = await fetch(url);
-    			const data = await response.json();
-    			console.log(data);
+//     		try {
+//     			let response = await fetch(url);
+//     			const data = await response.json();
+//     			console.log(data);
     			
-    			userProfileImg
-    			document.querySelector("#userProfileImg").src = data.userProfileImageUrl;
     			
-    		}
-    		catch (error) {
-    			console.error(error)
-    		}
-    	}
+//     			document.querySelector("#userProfileImg").src = data.userProfileImageUrl;
+    			
+//     		}
+//     		catch (error) {
+//     			console.error(error)
+//     		}
+//     	}
     	
     	// CKEditor 초기화
     	async function initCKEditor(){
