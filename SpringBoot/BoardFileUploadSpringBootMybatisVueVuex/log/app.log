@@ -1,0 +1,300 @@
+2022-11-15 08:36:02.535  INFO 4676 --- [restartedMain] ploadSpringBootMybatisVueVuexApplication : Starting BoardFileUploadSpringBootMybatisVueVuexApplication using Java 1.8.0_192 on DESKTOP-KVCQHCD with PID 4676 (C:\SSAFY\OneDrive\SSAFY\ssafy_spring_boot\BoardFileUploadSpringBootMybatisVueVuex\bin\main started by SSAFY in C:\SSAFY\OneDrive\SSAFY\ssafy_spring_boot\BoardFileUploadSpringBootMybatisVueVuex)
+2022-11-15 08:36:02.536  INFO 4676 --- [restartedMain] ploadSpringBootMybatisVueVuexApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-15 08:36:02.564  INFO 4676 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-15 08:36:02.565  INFO 4676 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-15 08:36:03.264  INFO 4676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-15 08:36:03.269  INFO 4676 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-15 08:36:03.269  INFO 4676 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-11-15 08:36:03.322  INFO 4676 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-15 08:36:03.322  INFO 4676 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 756 ms
+2022-11-15 08:36:03.647  INFO 4676 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-11-15 08:36:03.814  INFO 4676 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-15 08:36:03.834  INFO 4676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-15 08:36:03.841  INFO 4676 --- [restartedMain] ploadSpringBootMybatisVueVuexApplication : Started BoardFileUploadSpringBootMybatisVueVuexApplication in 1.571 seconds (JVM running for 2.361)
+2022-11-15 08:36:13.986  INFO 4676 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-15 08:36:13.987  INFO 4676 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-15 08:36:13.987  INFO 4676 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-11-15 08:37:01.796  INFO 4676 --- [restartedMain] ploadSpringBootMybatisVueVuexApplication : Starting BoardFileUploadSpringBootMybatisVueVuexApplication using Java 1.8.0_192 on DESKTOP-KVCQHCD with PID 4676 (C:\SSAFY\OneDrive\SSAFY\ssafy_spring_boot\BoardFileUploadSpringBootMybatisVueVuex\bin\main started by SSAFY in C:\SSAFY\OneDrive\SSAFY\ssafy_spring_boot\BoardFileUploadSpringBootMybatisVueVuex)
+2022-11-15 08:37:01.796  INFO 4676 --- [restartedMain] ploadSpringBootMybatisVueVuexApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-15 08:37:02.021  INFO 4676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-15 08:37:02.022  INFO 4676 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-15 08:37:02.022  INFO 4676 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-11-15 08:37:02.034  INFO 4676 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-15 08:37:02.034  INFO 4676 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 236 ms
+2022-11-15 08:37:02.114  INFO 4676 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-11-15 08:37:02.148  INFO 4676 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-15 08:37:02.155  INFO 4676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-15 08:37:02.158  INFO 4676 --- [restartedMain] ploadSpringBootMybatisVueVuexApplication : Started BoardFileUploadSpringBootMybatisVueVuexApplication in 0.388 seconds (JVM running for 60.676)
+2022-11-15 08:37:02.160  INFO 4676 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-15 08:37:09.247  INFO 4676 --- [restartedMain] ploadSpringBootMybatisVueVuexApplication : Starting BoardFileUploadSpringBootMybatisVueVuexApplication using Java 1.8.0_192 on DESKTOP-KVCQHCD with PID 4676 (C:\SSAFY\OneDrive\SSAFY\ssafy_spring_boot\BoardFileUploadSpringBootMybatisVueVuex\bin\main started by SSAFY in C:\SSAFY\OneDrive\SSAFY\ssafy_spring_boot\BoardFileUploadSpringBootMybatisVueVuex)
+2022-11-15 08:37:09.247  INFO 4676 --- [restartedMain] ploadSpringBootMybatisVueVuexApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-15 08:37:09.429  INFO 4676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-15 08:37:09.429  INFO 4676 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-15 08:37:09.430  INFO 4676 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-11-15 08:37:09.442  INFO 4676 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-15 08:37:09.442  INFO 4676 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 193 ms
+2022-11-15 08:37:09.512  INFO 4676 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-11-15 08:37:09.541  INFO 4676 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-15 08:37:09.548  INFO 4676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-15 08:37:09.551  INFO 4676 --- [restartedMain] ploadSpringBootMybatisVueVuexApplication : Started BoardFileUploadSpringBootMybatisVueVuexApplication in 0.328 seconds (JVM running for 68.068)
+2022-11-15 08:37:09.552  INFO 4676 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-15 08:37:14.584  INFO 4676 --- [restartedMain] ploadSpringBootMybatisVueVuexApplication : Starting BoardFileUploadSpringBootMybatisVueVuexApplication using Java 1.8.0_192 on DESKTOP-KVCQHCD with PID 4676 (C:\SSAFY\OneDrive\SSAFY\ssafy_spring_boot\BoardFileUploadSpringBootMybatisVueVuex\bin\main started by SSAFY in C:\SSAFY\OneDrive\SSAFY\ssafy_spring_boot\BoardFileUploadSpringBootMybatisVueVuex)
+2022-11-15 08:37:14.584  INFO 4676 --- [restartedMain] ploadSpringBootMybatisVueVuexApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-15 08:37:14.756  INFO 4676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-15 08:37:14.757  INFO 4676 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-15 08:37:14.757  INFO 4676 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-11-15 08:37:14.771  INFO 4676 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-15 08:37:14.771  INFO 4676 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 185 ms
+2022-11-15 08:37:14.837  INFO 4676 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-11-15 08:37:14.862  INFO 4676 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-15 08:37:14.867  INFO 4676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-15 08:37:14.870  INFO 4676 --- [restartedMain] ploadSpringBootMybatisVueVuexApplication : Started BoardFileUploadSpringBootMybatisVueVuexApplication in 0.307 seconds (JVM running for 73.387)
+2022-11-15 08:37:14.870  INFO 4676 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-15 08:37:23.008  INFO 4676 --- [restartedMain] ploadSpringBootMybatisVueVuexApplication : Starting BoardFileUploadSpringBootMybatisVueVuexApplication using Java 1.8.0_192 on DESKTOP-KVCQHCD with PID 4676 (C:\SSAFY\OneDrive\SSAFY\ssafy_spring_boot\BoardFileUploadSpringBootMybatisVueVuex\bin\main started by SSAFY in C:\SSAFY\OneDrive\SSAFY\ssafy_spring_boot\BoardFileUploadSpringBootMybatisVueVuex)
+2022-11-15 08:37:23.008  INFO 4676 --- [restartedMain] ploadSpringBootMybatisVueVuexApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-15 08:37:23.181  INFO 4676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-15 08:37:23.182  INFO 4676 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-15 08:37:23.182  INFO 4676 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-11-15 08:37:23.195  INFO 4676 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-15 08:37:23.195  INFO 4676 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 185 ms
+2022-11-15 08:37:23.257  INFO 4676 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-11-15 08:37:23.282  INFO 4676 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-15 08:37:23.287  INFO 4676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-15 08:37:23.289  INFO 4676 --- [restartedMain] ploadSpringBootMybatisVueVuexApplication : Started BoardFileUploadSpringBootMybatisVueVuexApplication in 0.303 seconds (JVM running for 81.807)
+2022-11-15 08:37:23.290  INFO 4676 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-11-15 08:37:30.973  INFO 4676 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-15 08:37:30.974  INFO 4676 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-15 08:37:30.975  INFO 4676 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-15 08:37:31.007  INFO 4676 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-15 08:37:31.147  INFO 4676 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-15 08:37:31.151 DEBUG 4676 --- [http-nio-8080-exec-2] com.mycom.myboard.dao.LoginDao.login     : ==>  Preparing: SELECT USER_SEQ, USER_NAME, USER_PASSWORD, USER_EMAIL, USER_PROFILE_IMAGE_URL, USER_REGISTER_DATE FROM USERS WHERE USER_EMAIL = ?
+2022-11-15 08:37:31.165 DEBUG 4676 --- [http-nio-8080-exec-2] com.mycom.myboard.dao.LoginDao.login     : ==> Parameters: dskim@my.com(String)
+2022-11-15 08:37:31.182 DEBUG 4676 --- [http-nio-8080-exec-2] com.mycom.myboard.dao.LoginDao.login     : <==      Total: 1
+2022-11-15 08:37:31.227 DEBUG 4676 --- [http-nio-8080-exec-4] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: SELECT b.BOARD_ID, b.USER_SEQ, u.USER_NAME, u.USER_PROFILE_IMAGE_URL, b.TITLE, b.CONTENT, b.REG_DT, b.READ_COUNT FROM BOARD b, USERS u WHERE b.USER_SEQ = u.USER_SEQ ORDER BY b.BOARD_ID DESC LIMIT ? OFFSET ?
+2022-11-15 08:37:31.227 DEBUG 4676 --- [http-nio-8080-exec-4] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-15 08:37:31.238 DEBUG 4676 --- [http-nio-8080-exec-4] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-15 08:37:31.239 DEBUG 4676 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: SELECT COUNT(*) FROM BOARD
+2022-11-15 08:37:31.239 DEBUG 4676 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-15 08:37:31.244 DEBUG 4676 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-15 08:37:56.916 DEBUG 4676 --- [http-nio-8080-exec-10] com.mycom.myboard.dao.CodeDao.codeList   : ==>  Preparing: SELECT code, code_name FROM code WHERE group_code = ?
+2022-11-15 08:37:56.917 DEBUG 4676 --- [http-nio-8080-exec-10] com.mycom.myboard.dao.CodeDao.codeList   : ==> Parameters: 001(String)
+2022-11-15 08:37:56.919 DEBUG 4676 --- [http-nio-8080-exec-10] com.mycom.myboard.dao.CodeDao.codeList   : <==      Total: 3
+2022-11-15 08:38:27.897 DEBUG 4676 --- [http-nio-8080-exec-2] c.m.myboard.dao.UserDao.userRegister     : ==>  Preparing: insert into users ( user_name, user_password, user_email, user_profile_image_url, user_register_date, user_clsf ) values ( ?, ?, ?, '', now(), ? )
+2022-11-15 08:38:27.897 DEBUG 4676 --- [http-nio-8080-exec-2] c.m.myboard.dao.UserDao.userRegister     : ==> Parameters: 마길동(String), !Q@W#E$R5t(String), ma@gildong.com(String), 003(String)
+2022-11-15 08:38:27.903 DEBUG 4676 --- [http-nio-8080-exec-2] c.m.myboard.dao.UserDao.userRegister     : <==    Updates: 1
+2022-11-15 08:38:30.997 DEBUG 4676 --- [http-nio-8080-exec-4] com.mycom.myboard.dao.LoginDao.login     : ==>  Preparing: SELECT USER_SEQ, USER_NAME, USER_PASSWORD, USER_EMAIL, USER_PROFILE_IMAGE_URL, USER_REGISTER_DATE FROM USERS WHERE USER_EMAIL = ?
+2022-11-15 08:38:30.997 DEBUG 4676 --- [http-nio-8080-exec-4] com.mycom.myboard.dao.LoginDao.login     : ==> Parameters: dskim@my.com(String)
+2022-11-15 08:38:30.998 DEBUG 4676 --- [http-nio-8080-exec-4] com.mycom.myboard.dao.LoginDao.login     : <==      Total: 1
+2022-11-15 08:38:31.009 DEBUG 4676 --- [http-nio-8080-exec-3] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: SELECT b.BOARD_ID, b.USER_SEQ, u.USER_NAME, u.USER_PROFILE_IMAGE_URL, b.TITLE, b.CONTENT, b.REG_DT, b.READ_COUNT FROM BOARD b, USERS u WHERE b.USER_SEQ = u.USER_SEQ ORDER BY b.BOARD_ID DESC LIMIT ? OFFSET ?
+2022-11-15 08:38:31.009 DEBUG 4676 --- [http-nio-8080-exec-3] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-15 08:38:31.020 DEBUG 4676 --- [http-nio-8080-exec-3] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-15 08:38:31.020 DEBUG 4676 --- [http-nio-8080-exec-3] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: SELECT COUNT(*) FROM BOARD
+2022-11-15 08:38:31.020 DEBUG 4676 --- [http-nio-8080-exec-3] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-15 08:38:31.023 DEBUG 4676 --- [http-nio-8080-exec-3] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-15 08:38:42.822 DEBUG 4676 --- [http-nio-8080-exec-5] c.m.myboard.dao.BoardDao.boardInsert     : ==>  Preparing: INSERT INTO BOARD ( USER_SEQ, TITLE, CONTENT, REG_DT, READ_COUNT ) VALUES ( ?, ?, ?, now(), 0 )
+2022-11-15 08:38:42.822 DEBUG 4676 --- [http-nio-8080-exec-5] c.m.myboard.dao.BoardDao.boardInsert     : ==> Parameters: 2(Integer), 9(String), <p>9</p>(String)
+2022-11-15 08:38:42.823 DEBUG 4676 --- [http-nio-8080-exec-5] c.m.myboard.dao.BoardDao.boardInsert     : <==    Updates: 1
+2022-11-15 08:38:42.827 DEBUG 4676 --- [http-nio-8080-exec-5] c.m.m.dao.BoardDao.boardFileInsert       : ==>  Preparing: INSERT INTO BOARD_FILE ( BOARD_ID, FILE_NAME, FILE_SIZE, FILE_CONTENT_TYPE, FILE_URL ) VALUES ( ?, ?, ?, ?, ? )
+2022-11-15 08:38:42.827 DEBUG 4676 --- [http-nio-8080-exec-5] c.m.m.dao.BoardDao.boardFileInsert       : ==> Parameters: 0(Integer), lee2.png(String), 3229762(Long), image/png(String), upload/0b631563-4f10-43ac-b34f-1ebd60b71027.png(String)
+2022-11-15 08:38:42.829 DEBUG 4676 --- [http-nio-8080-exec-5] c.m.m.dao.BoardDao.boardFileInsert       : <==    Updates: 1
+2022-11-15 08:38:42.830 DEBUG 4676 --- [http-nio-8080-exec-5] c.m.m.dao.BoardDao.boardFileInsert       : ==>  Preparing: INSERT INTO BOARD_FILE ( BOARD_ID, FILE_NAME, FILE_SIZE, FILE_CONTENT_TYPE, FILE_URL ) VALUES ( ?, ?, ?, ?, ? )
+2022-11-15 08:38:42.830 DEBUG 4676 --- [http-nio-8080-exec-5] c.m.m.dao.BoardDao.boardFileInsert       : ==> Parameters: 0(Integer), son.jpg(String), 158478(Long), image/jpeg(String), upload/fbe7b1d1-042c-4602-b4ae-3462d01c149e.jpg(String)
+2022-11-15 08:38:42.831 DEBUG 4676 --- [http-nio-8080-exec-5] c.m.m.dao.BoardDao.boardFileInsert       : <==    Updates: 1
+2022-11-15 08:38:42.847 DEBUG 4676 --- [http-nio-8080-exec-7] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: SELECT b.BOARD_ID, b.USER_SEQ, u.USER_NAME, u.USER_PROFILE_IMAGE_URL, b.TITLE, b.CONTENT, b.REG_DT, b.READ_COUNT FROM BOARD b, USERS u WHERE b.USER_SEQ = u.USER_SEQ ORDER BY b.BOARD_ID DESC LIMIT ? OFFSET ?
+2022-11-15 08:38:42.847 DEBUG 4676 --- [http-nio-8080-exec-7] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-15 08:38:42.856 DEBUG 4676 --- [http-nio-8080-exec-7] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-15 08:38:42.856 DEBUG 4676 --- [http-nio-8080-exec-7] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: SELECT COUNT(*) FROM BOARD
+2022-11-15 08:38:42.856 DEBUG 4676 --- [http-nio-8080-exec-7] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-15 08:38:42.858 DEBUG 4676 --- [http-nio-8080-exec-7] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-15 08:38:54.544 DEBUG 4676 --- [http-nio-8080-exec-10] com.mycom.myboard.dao.LoginDao.login     : ==>  Preparing: SELECT USER_SEQ, USER_NAME, USER_PASSWORD, USER_EMAIL, USER_PROFILE_IMAGE_URL, USER_REGISTER_DATE FROM USERS WHERE USER_EMAIL = ?
+2022-11-15 08:38:54.544 DEBUG 4676 --- [http-nio-8080-exec-10] com.mycom.myboard.dao.LoginDao.login     : ==> Parameters: dskim@my.com(String)
+2022-11-15 08:38:54.545 DEBUG 4676 --- [http-nio-8080-exec-10] com.mycom.myboard.dao.LoginDao.login     : <==      Total: 1
+2022-11-15 08:38:54.556 DEBUG 4676 --- [http-nio-8080-exec-1] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: SELECT b.BOARD_ID, b.USER_SEQ, u.USER_NAME, u.USER_PROFILE_IMAGE_URL, b.TITLE, b.CONTENT, b.REG_DT, b.READ_COUNT FROM BOARD b, USERS u WHERE b.USER_SEQ = u.USER_SEQ ORDER BY b.BOARD_ID DESC LIMIT ? OFFSET ?
+2022-11-15 08:38:54.556 DEBUG 4676 --- [http-nio-8080-exec-1] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-15 08:38:54.565 DEBUG 4676 --- [http-nio-8080-exec-1] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-15 08:38:54.565 DEBUG 4676 --- [http-nio-8080-exec-1] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: SELECT COUNT(*) FROM BOARD
+2022-11-15 08:38:54.566 DEBUG 4676 --- [http-nio-8080-exec-1] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-15 08:38:54.568 DEBUG 4676 --- [http-nio-8080-exec-1] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-15 08:42:30.325 DEBUG 4676 --- [http-nio-8080-exec-3] com.mycom.myboard.dao.LoginDao.login     : ==>  Preparing: SELECT USER_SEQ, USER_NAME, USER_PASSWORD, USER_EMAIL, USER_PROFILE_IMAGE_URL, USER_REGISTER_DATE FROM USERS WHERE USER_EMAIL = ?
+2022-11-15 08:42:30.326 DEBUG 4676 --- [http-nio-8080-exec-3] com.mycom.myboard.dao.LoginDao.login     : ==> Parameters: dskim@my.com(String)
+2022-11-15 08:42:30.327 DEBUG 4676 --- [http-nio-8080-exec-3] com.mycom.myboard.dao.LoginDao.login     : <==      Total: 1
+2022-11-15 08:42:30.340 DEBUG 4676 --- [http-nio-8080-exec-5] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: SELECT b.BOARD_ID, b.USER_SEQ, u.USER_NAME, u.USER_PROFILE_IMAGE_URL, b.TITLE, b.CONTENT, b.REG_DT, b.READ_COUNT FROM BOARD b, USERS u WHERE b.USER_SEQ = u.USER_SEQ ORDER BY b.BOARD_ID DESC LIMIT ? OFFSET ?
+2022-11-15 08:42:30.340 DEBUG 4676 --- [http-nio-8080-exec-5] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-15 08:42:30.349 DEBUG 4676 --- [http-nio-8080-exec-5] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-15 08:42:30.349 DEBUG 4676 --- [http-nio-8080-exec-5] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: SELECT COUNT(*) FROM BOARD
+2022-11-15 08:42:30.349 DEBUG 4676 --- [http-nio-8080-exec-5] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-15 08:42:30.352 DEBUG 4676 --- [http-nio-8080-exec-5] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-15 08:43:06.102 DEBUG 4676 --- [http-nio-8080-exec-7] c.m.myboard.dao.BoardDao.boardInsert     : ==>  Preparing: INSERT INTO BOARD ( USER_SEQ, TITLE, CONTENT, REG_DT, READ_COUNT ) VALUES ( ?, ?, ?, now(), 0 )
+2022-11-15 08:43:06.103 DEBUG 4676 --- [http-nio-8080-exec-7] c.m.myboard.dao.BoardDao.boardInsert     : ==> Parameters: 2(Integer), 8(String), <p>8</p>(String)
+2022-11-15 08:43:06.104 DEBUG 4676 --- [http-nio-8080-exec-7] c.m.myboard.dao.BoardDao.boardInsert     : <==    Updates: 1
+2022-11-15 08:43:06.119 DEBUG 4676 --- [http-nio-8080-exec-9] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: SELECT b.BOARD_ID, b.USER_SEQ, u.USER_NAME, u.USER_PROFILE_IMAGE_URL, b.TITLE, b.CONTENT, b.REG_DT, b.READ_COUNT FROM BOARD b, USERS u WHERE b.USER_SEQ = u.USER_SEQ ORDER BY b.BOARD_ID DESC LIMIT ? OFFSET ?
+2022-11-15 08:43:06.119 DEBUG 4676 --- [http-nio-8080-exec-9] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-15 08:43:06.129 DEBUG 4676 --- [http-nio-8080-exec-9] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-15 08:43:06.130 DEBUG 4676 --- [http-nio-8080-exec-9] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: SELECT COUNT(*) FROM BOARD
+2022-11-15 08:43:06.130 DEBUG 4676 --- [http-nio-8080-exec-9] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-15 08:43:06.133 DEBUG 4676 --- [http-nio-8080-exec-9] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-15 08:43:11.767 DEBUG 4676 --- [http-nio-8080-exec-8] com.mycom.myboard.dao.LoginDao.login     : ==>  Preparing: SELECT USER_SEQ, USER_NAME, USER_PASSWORD, USER_EMAIL, USER_PROFILE_IMAGE_URL, USER_REGISTER_DATE FROM USERS WHERE USER_EMAIL = ?
+2022-11-15 08:43:11.768 DEBUG 4676 --- [http-nio-8080-exec-8] com.mycom.myboard.dao.LoginDao.login     : ==> Parameters: dskim@my.com(String)
+2022-11-15 08:43:11.769 DEBUG 4676 --- [http-nio-8080-exec-8] com.mycom.myboard.dao.LoginDao.login     : <==      Total: 1
+2022-11-15 08:43:11.781 DEBUG 4676 --- [http-nio-8080-exec-6] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: SELECT b.BOARD_ID, b.USER_SEQ, u.USER_NAME, u.USER_PROFILE_IMAGE_URL, b.TITLE, b.CONTENT, b.REG_DT, b.READ_COUNT FROM BOARD b, USERS u WHERE b.USER_SEQ = u.USER_SEQ ORDER BY b.BOARD_ID DESC LIMIT ? OFFSET ?
+2022-11-15 08:43:11.782 DEBUG 4676 --- [http-nio-8080-exec-6] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-15 08:43:11.795 DEBUG 4676 --- [http-nio-8080-exec-6] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-15 08:43:11.795 DEBUG 4676 --- [http-nio-8080-exec-6] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: SELECT COUNT(*) FROM BOARD
+2022-11-15 08:43:11.795 DEBUG 4676 --- [http-nio-8080-exec-6] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-15 08:43:11.797 DEBUG 4676 --- [http-nio-8080-exec-6] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-15 08:43:38.400 DEBUG 4676 --- [http-nio-8080-exec-10] com.mycom.myboard.dao.LoginDao.login     : ==>  Preparing: SELECT USER_SEQ, USER_NAME, USER_PASSWORD, USER_EMAIL, USER_PROFILE_IMAGE_URL, USER_REGISTER_DATE FROM USERS WHERE USER_EMAIL = ?
+2022-11-15 08:43:38.400 DEBUG 4676 --- [http-nio-8080-exec-10] com.mycom.myboard.dao.LoginDao.login     : ==> Parameters: dskim@my.com(String)
+2022-11-15 08:43:38.402 DEBUG 4676 --- [http-nio-8080-exec-10] com.mycom.myboard.dao.LoginDao.login     : <==      Total: 1
+2022-11-15 08:43:38.415 DEBUG 4676 --- [http-nio-8080-exec-1] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: SELECT b.BOARD_ID, b.USER_SEQ, u.USER_NAME, u.USER_PROFILE_IMAGE_URL, b.TITLE, b.CONTENT, b.REG_DT, b.READ_COUNT FROM BOARD b, USERS u WHERE b.USER_SEQ = u.USER_SEQ ORDER BY b.BOARD_ID DESC LIMIT ? OFFSET ?
+2022-11-15 08:43:38.416 DEBUG 4676 --- [http-nio-8080-exec-1] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-15 08:43:38.424 DEBUG 4676 --- [http-nio-8080-exec-1] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-15 08:43:38.424 DEBUG 4676 --- [http-nio-8080-exec-1] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: SELECT COUNT(*) FROM BOARD
+2022-11-15 08:43:38.424 DEBUG 4676 --- [http-nio-8080-exec-1] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-15 08:43:38.426 DEBUG 4676 --- [http-nio-8080-exec-1] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-15 08:43:54.590 DEBUG 4676 --- [http-nio-8080-exec-2] c.m.myboard.dao.BoardDao.boardInsert     : ==>  Preparing: INSERT INTO BOARD ( USER_SEQ, TITLE, CONTENT, REG_DT, READ_COUNT ) VALUES ( ?, ?, ?, now(), 0 )
+2022-11-15 08:43:54.590 DEBUG 4676 --- [http-nio-8080-exec-2] c.m.myboard.dao.BoardDao.boardInsert     : ==> Parameters: 2(Integer), 77(String), <p>77</p>(String)
+2022-11-15 08:43:54.591 DEBUG 4676 --- [http-nio-8080-exec-2] c.m.myboard.dao.BoardDao.boardInsert     : <==    Updates: 1
+2022-11-15 08:43:54.608 DEBUG 4676 --- [http-nio-8080-exec-4] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: SELECT b.BOARD_ID, b.USER_SEQ, u.USER_NAME, u.USER_PROFILE_IMAGE_URL, b.TITLE, b.CONTENT, b.REG_DT, b.READ_COUNT FROM BOARD b, USERS u WHERE b.USER_SEQ = u.USER_SEQ ORDER BY b.BOARD_ID DESC LIMIT ? OFFSET ?
+2022-11-15 08:43:54.608 DEBUG 4676 --- [http-nio-8080-exec-4] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-15 08:43:54.618 DEBUG 4676 --- [http-nio-8080-exec-4] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-15 08:43:54.618 DEBUG 4676 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: SELECT COUNT(*) FROM BOARD
+2022-11-15 08:43:54.619 DEBUG 4676 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-15 08:43:54.621 DEBUG 4676 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-15 08:44:58.660  INFO 4676 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-11-15 08:44:59.042  INFO 4676 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-15 08:44:59.048  INFO 4676 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-15 11:07:58.456  INFO 16336 --- [restartedMain] ploadSpringBootMybatisVueVuexApplication : Starting BoardFileUploadSpringBootMybatisVueVuexApplication using Java 1.8.0_192 on DESKTOP-KVCQHCD with PID 16336 (C:\SSAFY\OneDrive\SSAFY\ssafy_spring_boot\BoardFileUploadSpringBootMybatisVueVuex\bin\main started by SSAFY in C:\SSAFY\OneDrive\SSAFY\ssafy_spring_boot\BoardFileUploadSpringBootMybatisVueVuex)
+2022-11-15 11:07:58.457  INFO 16336 --- [restartedMain] ploadSpringBootMybatisVueVuexApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-15 11:07:58.484  INFO 16336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-15 11:07:58.485  INFO 16336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-15 11:07:59.205  INFO 16336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-15 11:07:59.211  INFO 16336 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-15 11:07:59.211  INFO 16336 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-11-15 11:07:59.264  INFO 16336 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-15 11:07:59.265  INFO 16336 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 780 ms
+2022-11-15 11:07:59.623  INFO 16336 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-11-15 11:07:59.820  INFO 16336 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-15 11:07:59.844  INFO 16336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-15 11:07:59.852  INFO 16336 --- [restartedMain] ploadSpringBootMybatisVueVuexApplication : Started BoardFileUploadSpringBootMybatisVueVuexApplication in 1.646 seconds (JVM running for 2.478)
+2022-11-15 11:08:44.576  INFO 16336 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-15 11:08:44.576  INFO 16336 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-15 11:08:44.577  INFO 16336 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-15 11:08:44.630  INFO 16336 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-15 11:08:44.774  INFO 16336 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-15 11:08:44.778 DEBUG 16336 --- [http-nio-8080-exec-1] com.mycom.myboard.dao.LoginDao.login     : ==>  Preparing: SELECT USER_SEQ, USER_NAME, USER_PASSWORD, USER_EMAIL, USER_PROFILE_IMAGE_URL, USER_REGISTER_DATE FROM USERS WHERE USER_EMAIL = ?
+2022-11-15 11:08:44.793 DEBUG 16336 --- [http-nio-8080-exec-1] com.mycom.myboard.dao.LoginDao.login     : ==> Parameters: dskim@my.com(String)
+2022-11-15 11:08:44.806 DEBUG 16336 --- [http-nio-8080-exec-1] com.mycom.myboard.dao.LoginDao.login     : <==      Total: 1
+2022-11-15 11:08:44.854 DEBUG 16336 --- [http-nio-8080-exec-3] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: SELECT b.BOARD_ID, b.USER_SEQ, u.USER_NAME, u.USER_PROFILE_IMAGE_URL, b.TITLE, b.CONTENT, b.REG_DT, b.READ_COUNT FROM BOARD b, USERS u WHERE b.USER_SEQ = u.USER_SEQ ORDER BY b.BOARD_ID DESC LIMIT ? OFFSET ?
+2022-11-15 11:08:44.855 DEBUG 16336 --- [http-nio-8080-exec-3] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-15 11:08:44.868 DEBUG 16336 --- [http-nio-8080-exec-3] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-15 11:08:44.868 DEBUG 16336 --- [http-nio-8080-exec-3] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: SELECT COUNT(*) FROM BOARD
+2022-11-15 11:08:44.868 DEBUG 16336 --- [http-nio-8080-exec-3] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-15 11:08:44.872 DEBUG 16336 --- [http-nio-8080-exec-3] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-15 11:08:49.399 DEBUG 16336 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardUserReadCount    : ==>  Preparing: SELECT count(*) FROM board_user_read WHERE board_id = ? and user_seq = ?
+2022-11-15 11:08:49.399 DEBUG 16336 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardUserReadCount    : ==> Parameters: 3210(Integer), 2(Integer)
+2022-11-15 11:08:49.401 DEBUG 16336 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardUserReadCount    : <==      Total: 1
+2022-11-15 11:08:49.402 DEBUG 16336 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardUserReadInsert   : ==>  Preparing: INSERT INTO board_user_read ( board_id, user_seq ) VALUES ( ?, ? )
+2022-11-15 11:08:49.403 DEBUG 16336 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardUserReadInsert   : ==> Parameters: 3210(Integer), 2(Integer)
+2022-11-15 11:08:49.404 DEBUG 16336 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardUserReadInsert   : <==    Updates: 1
+2022-11-15 11:08:49.404 DEBUG 16336 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardReadCountUpdate  : ==>  Preparing: UPDATE board set READ_COUNT = READ_COUNT + 1 WHERE BOARD_ID = ?
+2022-11-15 11:08:49.404 DEBUG 16336 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardReadCountUpdate  : ==> Parameters: 3210(Integer)
+2022-11-15 11:08:49.407 DEBUG 16336 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardReadCountUpdate  : <==    Updates: 1
+2022-11-15 11:08:49.408 DEBUG 16336 --- [http-nio-8080-exec-4] c.m.myboard.dao.BoardDao.boardDetail     : ==>  Preparing: SELECT b.BOARD_ID, b.USER_SEQ, u.USER_NAME, u.USER_PROFILE_IMAGE_URL, b.TITLE, b.CONTENT, b.REG_DT, b.READ_COUNT FROM BOARD b, USERS u WHERE b.BOARD_ID = ? AND b.USER_SEQ = u.USER_SEQ
+2022-11-15 11:08:49.408 DEBUG 16336 --- [http-nio-8080-exec-4] c.m.myboard.dao.BoardDao.boardDetail     : ==> Parameters: 3210(Integer)
+2022-11-15 11:08:49.411 DEBUG 16336 --- [http-nio-8080-exec-4] c.m.myboard.dao.BoardDao.boardDetail     : <==      Total: 1
+2022-11-15 11:08:49.411 DEBUG 16336 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardDetailFileList   : ==>  Preparing: SELECT BOARD_ID, FILE_ID, FILE_NAME, FILE_SIZE, FILE_CONTENT_TYPE, FILE_URL, REG_DT FROM BOARD_FILE WHERE BOARD_ID = ?
+2022-11-15 11:08:49.411 DEBUG 16336 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardDetailFileList   : ==> Parameters: 3210(Integer)
+2022-11-15 11:08:49.412 DEBUG 16336 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardDetailFileList   : <==      Total: 0
+2022-11-15 11:08:55.621 DEBUG 16336 --- [http-nio-8080-exec-5] c.m.myboard.dao.BoardDao.boardUpdate     : ==>  Preparing: UPDATE BOARD SET TITLE = ?, CONTENT = ? WHERE BOARD_ID = ?
+2022-11-15 11:08:55.621 DEBUG 16336 --- [http-nio-8080-exec-5] c.m.myboard.dao.BoardDao.boardUpdate     : ==> Parameters: 33555(String), <p>33</p>(String), 3210(Integer)
+2022-11-15 11:08:55.625 DEBUG 16336 --- [http-nio-8080-exec-5] c.m.myboard.dao.BoardDao.boardUpdate     : <==    Updates: 1
+2022-11-15 11:08:55.625 DEBUG 16336 --- [http-nio-8080-exec-5] c.m.m.d.BoardDao.boardFileUrlDeleteList  : ==>  Preparing: SELECT FILE_URL FROM BOARD_FILE WHERE BOARD_ID = ?
+2022-11-15 11:08:55.625 DEBUG 16336 --- [http-nio-8080-exec-5] c.m.m.d.BoardDao.boardFileUrlDeleteList  : ==> Parameters: 3210(Integer)
+2022-11-15 11:08:55.626 DEBUG 16336 --- [http-nio-8080-exec-5] c.m.m.d.BoardDao.boardFileUrlDeleteList  : <==      Total: 0
+2022-11-15 11:08:55.626 DEBUG 16336 --- [http-nio-8080-exec-5] c.m.m.dao.BoardDao.boardFileDelete       : ==>  Preparing: DELETE FROM BOARD_FILE WHERE BOARD_ID = ?
+2022-11-15 11:08:55.626 DEBUG 16336 --- [http-nio-8080-exec-5] c.m.m.dao.BoardDao.boardFileDelete       : ==> Parameters: 3210(Integer)
+2022-11-15 11:08:55.627 DEBUG 16336 --- [http-nio-8080-exec-5] c.m.m.dao.BoardDao.boardFileDelete       : <==    Updates: 0
+2022-11-15 11:08:55.647 DEBUG 16336 --- [http-nio-8080-exec-6] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: SELECT b.BOARD_ID, b.USER_SEQ, u.USER_NAME, u.USER_PROFILE_IMAGE_URL, b.TITLE, b.CONTENT, b.REG_DT, b.READ_COUNT FROM BOARD b, USERS u WHERE b.USER_SEQ = u.USER_SEQ ORDER BY b.BOARD_ID DESC LIMIT ? OFFSET ?
+2022-11-15 11:08:55.647 DEBUG 16336 --- [http-nio-8080-exec-6] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-15 11:08:55.657 DEBUG 16336 --- [http-nio-8080-exec-6] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-15 11:08:55.657 DEBUG 16336 --- [http-nio-8080-exec-6] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: SELECT COUNT(*) FROM BOARD
+2022-11-15 11:08:55.658 DEBUG 16336 --- [http-nio-8080-exec-6] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-15 11:08:55.660 DEBUG 16336 --- [http-nio-8080-exec-6] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-15 11:09:02.328 DEBUG 16336 --- [http-nio-8080-exec-7] c.m.myboard.dao.BoardDao.boardInsert     : ==>  Preparing: INSERT INTO BOARD ( USER_SEQ, TITLE, CONTENT, REG_DT, READ_COUNT ) VALUES ( ?, ?, ?, now(), 0 )
+2022-11-15 11:09:02.329 DEBUG 16336 --- [http-nio-8080-exec-7] c.m.myboard.dao.BoardDao.boardInsert     : ==> Parameters: 2(Integer), 66(String), <p>666</p>(String)
+2022-11-15 11:09:02.330 DEBUG 16336 --- [http-nio-8080-exec-7] c.m.myboard.dao.BoardDao.boardInsert     : <==    Updates: 1
+2022-11-15 11:09:02.344 DEBUG 16336 --- [http-nio-8080-exec-8] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: SELECT b.BOARD_ID, b.USER_SEQ, u.USER_NAME, u.USER_PROFILE_IMAGE_URL, b.TITLE, b.CONTENT, b.REG_DT, b.READ_COUNT FROM BOARD b, USERS u WHERE b.USER_SEQ = u.USER_SEQ ORDER BY b.BOARD_ID DESC LIMIT ? OFFSET ?
+2022-11-15 11:09:02.344 DEBUG 16336 --- [http-nio-8080-exec-8] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-15 11:09:02.353 DEBUG 16336 --- [http-nio-8080-exec-8] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-15 11:09:02.353 DEBUG 16336 --- [http-nio-8080-exec-8] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: SELECT COUNT(*) FROM BOARD
+2022-11-15 11:09:02.354 DEBUG 16336 --- [http-nio-8080-exec-8] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-15 11:09:02.356 DEBUG 16336 --- [http-nio-8080-exec-8] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-15 11:09:04.310 DEBUG 16336 --- [http-nio-8080-exec-9] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: SELECT b.BOARD_ID, b.USER_SEQ, u.USER_NAME, u.USER_PROFILE_IMAGE_URL, b.TITLE, b.CONTENT, b.REG_DT, b.READ_COUNT FROM BOARD b, USERS u WHERE b.USER_SEQ = u.USER_SEQ ORDER BY b.BOARD_ID DESC LIMIT ? OFFSET ?
+2022-11-15 11:09:04.311 DEBUG 16336 --- [http-nio-8080-exec-9] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 10(Integer)
+2022-11-15 11:09:04.321 DEBUG 16336 --- [http-nio-8080-exec-9] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-15 11:09:04.321 DEBUG 16336 --- [http-nio-8080-exec-9] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: SELECT COUNT(*) FROM BOARD
+2022-11-15 11:09:04.321 DEBUG 16336 --- [http-nio-8080-exec-9] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-15 11:09:04.324 DEBUG 16336 --- [http-nio-8080-exec-9] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-15 11:09:05.177 DEBUG 16336 --- [http-nio-8080-exec-10] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: SELECT b.BOARD_ID, b.USER_SEQ, u.USER_NAME, u.USER_PROFILE_IMAGE_URL, b.TITLE, b.CONTENT, b.REG_DT, b.READ_COUNT FROM BOARD b, USERS u WHERE b.USER_SEQ = u.USER_SEQ ORDER BY b.BOARD_ID DESC LIMIT ? OFFSET ?
+2022-11-15 11:09:05.178 DEBUG 16336 --- [http-nio-8080-exec-10] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-15 11:09:05.187 DEBUG 16336 --- [http-nio-8080-exec-10] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-15 11:09:05.187 DEBUG 16336 --- [http-nio-8080-exec-10] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: SELECT COUNT(*) FROM BOARD
+2022-11-15 11:09:05.187 DEBUG 16336 --- [http-nio-8080-exec-10] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-15 11:09:05.189 DEBUG 16336 --- [http-nio-8080-exec-10] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-15 11:09:06.441 DEBUG 16336 --- [http-nio-8080-exec-2] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: SELECT b.BOARD_ID, b.USER_SEQ, u.USER_NAME, u.USER_PROFILE_IMAGE_URL, b.TITLE, b.CONTENT, b.REG_DT, b.READ_COUNT FROM BOARD b, USERS u WHERE b.USER_SEQ = u.USER_SEQ ORDER BY b.BOARD_ID DESC LIMIT ? OFFSET ?
+2022-11-15 11:09:06.441 DEBUG 16336 --- [http-nio-8080-exec-2] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 100(Integer)
+2022-11-15 11:09:06.450 DEBUG 16336 --- [http-nio-8080-exec-2] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-15 11:09:06.450 DEBUG 16336 --- [http-nio-8080-exec-2] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: SELECT COUNT(*) FROM BOARD
+2022-11-15 11:09:06.451 DEBUG 16336 --- [http-nio-8080-exec-2] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-15 11:09:06.453 DEBUG 16336 --- [http-nio-8080-exec-2] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-15 11:09:08.159 DEBUG 16336 --- [http-nio-8080-exec-1] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: SELECT b.BOARD_ID, b.USER_SEQ, u.USER_NAME, u.USER_PROFILE_IMAGE_URL, b.TITLE, b.CONTENT, b.REG_DT, b.READ_COUNT FROM BOARD b, USERS u WHERE b.USER_SEQ = u.USER_SEQ ORDER BY b.BOARD_ID DESC LIMIT ? OFFSET ?
+2022-11-15 11:09:08.160 DEBUG 16336 --- [http-nio-8080-exec-1] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 90(Integer)
+2022-11-15 11:09:08.170 DEBUG 16336 --- [http-nio-8080-exec-1] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-15 11:09:08.171 DEBUG 16336 --- [http-nio-8080-exec-1] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: SELECT COUNT(*) FROM BOARD
+2022-11-15 11:09:08.171 DEBUG 16336 --- [http-nio-8080-exec-1] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-15 11:09:08.173 DEBUG 16336 --- [http-nio-8080-exec-1] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-15 11:09:22.700 DEBUG 16336 --- [http-nio-8080-exec-3] c.m.myboard.dao.BoardDao.boardInsert     : ==>  Preparing: INSERT INTO BOARD ( USER_SEQ, TITLE, CONTENT, REG_DT, READ_COUNT ) VALUES ( ?, ?, ?, now(), 0 )
+2022-11-15 11:09:22.701 DEBUG 16336 --- [http-nio-8080-exec-3] c.m.myboard.dao.BoardDao.boardInsert     : ==> Parameters: 2(Integer), 99(String), <p>999</p>(String)
+2022-11-15 11:09:22.702 DEBUG 16336 --- [http-nio-8080-exec-3] c.m.myboard.dao.BoardDao.boardInsert     : <==    Updates: 1
+2022-11-15 11:09:22.713 DEBUG 16336 --- [http-nio-8080-exec-4] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: SELECT b.BOARD_ID, b.USER_SEQ, u.USER_NAME, u.USER_PROFILE_IMAGE_URL, b.TITLE, b.CONTENT, b.REG_DT, b.READ_COUNT FROM BOARD b, USERS u WHERE b.USER_SEQ = u.USER_SEQ ORDER BY b.BOARD_ID DESC LIMIT ? OFFSET ?
+2022-11-15 11:09:22.714 DEBUG 16336 --- [http-nio-8080-exec-4] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 90(Integer)
+2022-11-15 11:09:22.723 DEBUG 16336 --- [http-nio-8080-exec-4] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-15 11:09:22.723 DEBUG 16336 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: SELECT COUNT(*) FROM BOARD
+2022-11-15 11:09:22.723 DEBUG 16336 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-15 11:09:22.726 DEBUG 16336 --- [http-nio-8080-exec-4] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-15 11:13:09.553 DEBUG 16336 --- [http-nio-8080-exec-7] c.m.myboard.dao.BoardDao.boardInsert     : ==>  Preparing: INSERT INTO BOARD ( USER_SEQ, TITLE, CONTENT, REG_DT, READ_COUNT ) VALUES ( ?, ?, ?, now(), 0 )
+2022-11-15 11:13:09.553 DEBUG 16336 --- [http-nio-8080-exec-7] c.m.myboard.dao.BoardDao.boardInsert     : ==> Parameters: 2(Integer), 7(String), <p>7</p>(String)
+2022-11-15 11:13:09.554 DEBUG 16336 --- [http-nio-8080-exec-7] c.m.myboard.dao.BoardDao.boardInsert     : <==    Updates: 1
+2022-11-15 11:13:09.566 DEBUG 16336 --- [http-nio-8080-exec-8] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: SELECT b.BOARD_ID, b.USER_SEQ, u.USER_NAME, u.USER_PROFILE_IMAGE_URL, b.TITLE, b.CONTENT, b.REG_DT, b.READ_COUNT FROM BOARD b, USERS u WHERE b.USER_SEQ = u.USER_SEQ ORDER BY b.BOARD_ID DESC LIMIT ? OFFSET ?
+2022-11-15 11:13:09.566 DEBUG 16336 --- [http-nio-8080-exec-8] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 90(Integer)
+2022-11-15 11:13:09.568 DEBUG 16336 --- [http-nio-8080-exec-8] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-15 11:13:09.568 DEBUG 16336 --- [http-nio-8080-exec-8] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: SELECT COUNT(*) FROM BOARD
+2022-11-15 11:13:09.568 DEBUG 16336 --- [http-nio-8080-exec-8] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-15 11:13:09.570 DEBUG 16336 --- [http-nio-8080-exec-8] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-15 11:13:12.319 DEBUG 16336 --- [http-nio-8080-exec-9] c.mycom.myboard.dao.BoardDao.boardList   : ==>  Preparing: SELECT b.BOARD_ID, b.USER_SEQ, u.USER_NAME, u.USER_PROFILE_IMAGE_URL, b.TITLE, b.CONTENT, b.REG_DT, b.READ_COUNT FROM BOARD b, USERS u WHERE b.USER_SEQ = u.USER_SEQ ORDER BY b.BOARD_ID DESC LIMIT ? OFFSET ?
+2022-11-15 11:13:12.319 DEBUG 16336 --- [http-nio-8080-exec-9] c.mycom.myboard.dao.BoardDao.boardList   : ==> Parameters: 10(Integer), 0(Integer)
+2022-11-15 11:13:12.321 DEBUG 16336 --- [http-nio-8080-exec-9] c.mycom.myboard.dao.BoardDao.boardList   : <==      Total: 10
+2022-11-15 11:13:12.322 DEBUG 16336 --- [http-nio-8080-exec-9] c.m.m.dao.BoardDao.boardListTotalCount   : ==>  Preparing: SELECT COUNT(*) FROM BOARD
+2022-11-15 11:13:12.322 DEBUG 16336 --- [http-nio-8080-exec-9] c.m.m.dao.BoardDao.boardListTotalCount   : ==> Parameters: 
+2022-11-15 11:13:12.324 DEBUG 16336 --- [http-nio-8080-exec-9] c.m.m.dao.BoardDao.boardListTotalCount   : <==      Total: 1
+2022-11-15 13:02:43.836  INFO 16336 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-11-15 13:02:44.243  INFO 16336 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-15 13:02:44.256  INFO 16336 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-15 16:36:14.115  INFO 15076 --- [restartedMain] ploadSpringBootMybatisVueVuexApplication : Starting BoardFileUploadSpringBootMybatisVueVuexApplication using Java 1.8.0_192 on DESKTOP-KVCQHCD with PID 15076 (C:\SSAFY\Spring\SpringBoot\BoardFileUploadSpringBootMybatisVueVuex\bin\main started by SSAFY in C:\SSAFY\Spring\SpringBoot\BoardFileUploadSpringBootMybatisVueVuex)
+2022-11-15 16:36:14.116  INFO 15076 --- [restartedMain] ploadSpringBootMybatisVueVuexApplication : No active profile set, falling back to 1 default profile: "default"
+2022-11-15 16:36:14.142  INFO 15076 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-15 16:36:14.142  INFO 15076 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-15 16:36:14.782  INFO 15076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-15 16:36:14.787  INFO 15076 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-15 16:36:14.787  INFO 15076 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-11-15 16:36:14.849  INFO 15076 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-15 16:36:14.849  INFO 15076 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 706 ms
+2022-11-15 16:36:15.156  INFO 15076 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-11-15 16:36:15.296  INFO 15076 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-15 16:36:15.315  INFO 15076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-15 16:36:15.321  INFO 15076 --- [restartedMain] ploadSpringBootMybatisVueVuexApplication : Started BoardFileUploadSpringBootMybatisVueVuexApplication in 1.426 seconds (JVM running for 1.847)
+2022-11-15 16:36:19.779  INFO 15076 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-15 16:36:19.779  INFO 15076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-15 16:36:19.780  INFO 15076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-15 17:04:34.351  INFO 15076 --- [restartedMain] ploadSpringBootMybatisVueVuexApplication : Starting BoardFileUploadSpringBootMybatisVueVuexApplication using Java 1.8.0_192 on DESKTOP-KVCQHCD with PID 15076 (C:\SSAFY\Spring\SpringBoot\BoardFileUploadSpringBootMybatisVueVuex\bin\main started by SSAFY in C:\SSAFY\Spring\SpringBoot\BoardFileUploadSpringBootMybatisVueVuex)
+2022-11-15 17:04:34.351  INFO 15076 --- [restartedMain] ploadSpringBootMybatisVueVuexApplication : No active profile set, falling back to 1 default profile: "default"
